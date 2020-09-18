@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Indie Flower', cursive;
+}
+
+.roda{
+    color: white;
+    background-color: purple;
+    text-align: center;
+    display: block;
+    border: none;
+    
+}
+
+.img{
+    height: 10%;
+    width: 10%;
+  }
+
+
+.link {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: inherit;
+    font-size: 20px;
+    line-height: 40px;
+    border: dashed;
+    display: ruby-base-container;
+}
+
+
+.produto {
+    background-color: purple;
+    color:white;
+    text-align: center;
+    overflow-clip-box: inherit; 
+    padding: 10 vh;
+    margin-bottom: 10 px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: double;
+    overflow-clip-box: inherit;
+}
+
+.foto{
+    height: 10%;
+    width: 10%;
+    background-color: purple;
+}
+
+.tabela{
+    text-align: left;
+    flex-direction: column;
+    justify-content: left;
+    word-spacing: 15px;
+}
+
+.foto{
+    text-align: center;
+}
+
+.produtin{
+    text-align: center;
+    margin: 10px;
+}
+
+.estoque{
+    text-decoration: none;
+}
+
+.reduzir{
+    padding-bottom: 10%;
+    margin-bottom: inherit;
+    margin: 0;
+}
+
+.tabelita{
+    text-align: center;
+    justify-content: center;
+    word-spacing: 20px;
+    margin: auto;
+    overflow-clip-box: inherit;
+}
+
+.center{
+    text-align: center;
+    justify-content:center;
+}
