@@ -13,6 +13,7 @@ body{
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
+    font-family: 'Indie Flower', cursive;
 }
 
 .roda{
@@ -20,6 +21,8 @@ body{
     background-color: purple;
     text-align: center;
     display: block;
+    border: none;
+    
 }
 
 .img{
@@ -27,38 +30,30 @@ body{
     width: 10%;
   }
 
-.topo{
-    background: purple;
-    color: white;
-    text-align: center;
-}
 
 .link {
     text-decoration: none;
     color: white;
     text-align: center;
-    display: block;
+    display: inherit;
+    font-size: 20px;
+    line-height: 40px;
+    border: dashed;
+    display: ruby-base-container;
 }
 
-.fundo2{
-    background-color: purple;
-}
-
-.fundo22{
-    background-color: purple;
-    color: white;
-    text-align: center;
-    display: block;
-    overflow-clip-box: inherit;
-    border: none;
-}
 
 .produto {
     background-color: purple;
     color:white;
     text-align: center;
     overflow-clip-box: inherit; 
-
+    padding: 10 vh;
+    margin-bottom: 10 px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: double;
+    overflow-clip-box: inherit;
 }
 
 .foto{
@@ -67,17 +62,11 @@ body{
     background-color: purple;
 }
 
-.funfa{
-    background-color: purple;
-    display: block;
-    text-align: center;
-    color: white;
-}
-
 .tabela{
     text-align: left;
     flex-direction: column;
     justify-content: left;
+    word-spacing: 15px;
 }
 
 .foto{
@@ -91,4 +80,23 @@ body{
 
 .estoque{
     text-decoration: none;
+}
+
+.reduzir{
+    padding-bottom: 10%;
+    margin-bottom: inherit;
+    margin: 0;
+}
+
+.tabelita{
+    text-align: center;
+    justify-content: center;
+    word-spacing: 20px;
+    margin: auto;
+    overflow-clip-box: inherit;
+}
+
+.center{
+    text-align: center;
+    justify-content:center;
 }
