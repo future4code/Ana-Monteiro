@@ -1,0 +1,158 @@
+  body{
+    font-family: cursive;
+    color: #DA2727;
+    margin: 0;
+    background: #FFFFFF
+    transition: background 1s;
+  }
+  .caixa1 {
+    color: 	#745cbc;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    background: url(./fundo.jpg);
+    background-size: 50%;
+  }  
+
+  .menu{
+    text-align: right;
+    padding-right: 40px;
+  }
+
+
+  .caixa2 {
+    background: #ebbcdb;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+
+  }  
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+
+  }
+
+  .caixa3 {
+    height: 300px;
+    text-align: center;
+  }  
+
+    h1 {
+     text-align: center;
+     font-size: 48px;
+  }
+
+    p {
+     text-align: center;
+    }
+
+    h3{
+     text-align: center;
+    }
+
+    h4{
+     text-align: center;
+    }
+
+    .ana{
+      height: 150px;
+      border: hidden;
+      padding-bottom: 20px;
+    }
+
+    .linkmenu{
+      text-decoration: none;
+      color: #4a566e;
+      margin-left: 20px;
+    }
+
+    a:hover {
+      color: blue;
+    }
+
+    .habilidade{
+      background: white;
+      width: 300px;
+      border-radius: 30px;
+      margin-left: 100px;
+      margin-right: 100px;
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .titulohabilidades{
+      text-align: center;
+      color: white; 
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      padding-top: 60px;
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-bottom: 40px;
+      flex-wrap: wrap;
+      font-size: 30px;
+     }
+
+    .titulocontato{
+      text-align: center;
+      padding-bottom: 10px;
+      border: none;
+    }
+
+    .linkwhatsapp{
+      color: white;
+      background: green;
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .outroscontatos{
+      padding-top: 30px;
+    }
+
+    @media only screen and (max-device-width:320px){ 
+       .menu{
+        display: none;
+       }
+    }
+
+      .habilidade{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 30px;
+      }
+    }
+
+       .tituloprojeto{
+           border: none;
+
+       }
+
+       .execute{
+           text-align: center;
+       }
+
+       .cor{
+           color: #745cbc;
+       }
