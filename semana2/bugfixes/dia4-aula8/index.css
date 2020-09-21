@@ -132,6 +132,8 @@ td button {
     border-radius: 5px;
     font-size: 10px;
     color: black;
+    text-align: center;
+    padding-top: 10px;
 }
 
 #back-button:hover {
@@ -169,3 +171,14 @@ h3{
 body{
     font-family: roboto;
 }
+
+#return{
+        display: flex;
+        justify-content: center;
+        margin-top: 2em;
+    }
+
+ ol {
+      list-style-position: inside;
+    }
+
