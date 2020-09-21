@@ -182,3 +182,10 @@ body{
       list-style-position: inside;
     }
 
+.icone:hover{
+      opacity: 0.5;
+}
+.icone:active {
+opacity: 1;
+}
+
