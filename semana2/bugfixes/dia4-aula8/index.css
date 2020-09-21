@@ -148,3 +148,8 @@ h3{
     height: 50px;
     background-color: white;
 }
+
+#cor:hover{
+    background-color: #635A3D;
+
+}
