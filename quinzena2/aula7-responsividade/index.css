@@ -1,0 +1,102 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    border: 1px solid black;
+}
+
+#main-container{
+    display: grid;
+}
+
+#first-block {
+    background-color: red;
+    display: grid;
+    height: 15vh;
+}
+
+
+#second-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+#terceiro-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#quarto-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.blue-block {
+    background-color: blue;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 30vh;
+    margin: 8px;
+
+}
+
+.yellow-block {
+    background-color: yellow;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+    height: 30vh;
+    margin: 8px;
+
+
+}
+
+.green-block {
+    background-color: green;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    height: 30 vh;
+    margin: 8px;
+
+}
+
+#terceiro-block{
+    display:grid;
+
+}
+
+.black-block {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 30vh;
+    margin: 10px;
+}
+
+#quinto{
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 15vh;
+}
+
+.white-block{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+
+}
+ 
+
+
+
