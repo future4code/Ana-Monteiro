@@ -2,12 +2,14 @@
     margin: 0;
 }
 
+
 body{
     width: 100vw;
     height: 50vh;
     padding: 0;
     margin: 0;
-    font-family: "Ranchers", cursive;
+    font-family: 'Indie Flower', cursive;
+    font-style: italic;
     background-color: pink;
 }
 
@@ -15,6 +17,7 @@ header{
     background-color: #6f241c;
     margin: 2px;
     height: 6em;
+    border: salmon;
 }
 
 ul{
@@ -28,7 +31,7 @@ ul{
     width: 10em;
     height: 10em;
     border: solid; color: aqua;
-    margin: px;
+    margin: 10px;
 }
 
 #videozinbolado{
@@ -51,11 +54,11 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Indie Flower', cursive;
     font-size: 30px;
     color: white;
     margin-left: 40%;
-    font-family: "Ranchers", cursive;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
     gap: 15px;
     padding: 10px;
@@ -63,10 +66,10 @@ footer{
 
 #name{
     display: flex;
-    font-family: "Ranchers", cursive;
+    font-family: 'Indie Flower', cursive;
     font-size: 35px;
     color: white;
-    margin: 10px;
+    margin: 20px;
 }
 
 .tamanhovideo{
@@ -91,4 +94,144 @@ footer{
     padding-top: 80px;
     padding-bottom: 0;
 
+}
+
+#textos{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+@media screen and (min-device-width: 421px) and (max-device-width: 800px){
+
+    body{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: "Ranchers", cursive;
+        background-color: pink;
     }
+
+    ul{
+        display: grid;
+        grid-template: 1fr / 1fr;
+    }
+
+    header, #exemplo{
+        display: grid;
+        grid-template: 1fr / 1fr;
+        align-items: baseline;
+    }
+
+    foot{
+        display: grid;
+        grid-template: 1f / 1fr;
+        align-self: center;
+        grid-column-start: 1fr;
+        grid-column-end: 1fr;
+    }
+
+    #primeiro{
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        width: 80vw;
+        height: 50vh;
+        align-self: center;
+    }
+
+    .fot{
+        display: grid;
+        grid-template: 1fr / 1fr;
+        grid-column-start: 1fr;
+        grid-column-end: 0fr;
+
+    }
+
+    .exemplo{
+        display: grid;
+        justify-items: center;
+        text-align: center;
+        grid-template: 1fr / 1fr;
+        max-width: 100%;
+        width: 50%;
+        height: 50%;
+    }
+
+    .tamanhovideo{
+        display: flexbox;
+        align-items: baseline;
+        margin: 0px;
+    }
+
+    #acertarvideo{
+        display: grid;
+        grid-template: 1fr / 1fr;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        padding-right: 5rem;
+        margin: 0px;
+    }
+
+    #acertarvideo2{
+        display: grid;
+        grid-template: 1fr / 1fr;
+        max-width: 100%;
+        width: 90%;
+        height: 70vh;
+        justify-content: center;
+        padding-right: 30vw;
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 420px){
+
+    body{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        font-family: "Ranchers", cursive;
+        background-color: pink;
+    }
+
+    ul{
+        display: grid;
+        grid-template: 1fr / 1fr;
+    }
+
+    #primeiro{
+        display: grid;
+        width: 80vw;
+        height: 40vh;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #name{
+        display: grid;
+        margin: 3px;
+    }
+
+    #acertarvideo{
+        display: grid;
+        grid-template: 1fr / 1fr;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        padding-right: 5rem;
+
+    }
+
+    #acertarvideo2{
+        display: grid;
+        grid-template: 1fr / 1fr;
+        max-width: 100%;
+        width: 50%;
+        height: 70vh;
+        justify-content: center;
+        padding-right: 30vw;
+    }
+}
