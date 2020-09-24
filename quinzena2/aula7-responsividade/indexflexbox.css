@@ -1,0 +1,139 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    border: 1px solid black;
+}
+
+#main-container{
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+}
+
+#first-block {
+    display: flex;
+    background-color: red;
+    height: 10em;
+}
+
+#second-block {
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+
+#third-block{
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+
+
+.blue-block {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 20em;
+    height:10em;
+    margin: 5px;
+}
+
+.yellow-block {
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 20em;
+    height: 10em;
+    margin: 5px;
+}
+
+.green-block {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 20em;
+    height: 10em;
+    margin: 5px;
+}
+
+.black-block {
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 20em;
+    height: 10em;
+    margin: 5px;
+}
+
+.white-block {
+    background-color: white;
+    display: flex;
+    width: 20em;
+    height: 9em;
+    margin: 5px;
+    
+}
+
+#four-block{
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+
+#outro{
+    display: flex;
+    justify-content: space-around;
+    border: none;
+}
+
+@media screen and (min-device-width: 421px)and (max-device-width: 800px){
+
+    #second-block, #third-block{
+        flex-wrap: wrap;
+    }
+
+    #outro{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    #caixabranca{
+        margin-bottom: 1em;
+        width: 99%;
+    }
+
+    .black-block{
+        width: 50%;
+    }
+
+    .green-block{
+        width: 100%;
+    }
+}
+
+@media screen and(min-device-width: 320px) and (max-device-width: 420px){
+
+    #second-block, #four-block, #third-block{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+
+    }
+
+    .blue-block, .yellow-block, .white-block, .green-block, .black-block{
+        width: 92%;
+        margin: 0.5em 0.5em 0.6em 0.5em;
+        height: 5em;
+    }
+
+}
+
