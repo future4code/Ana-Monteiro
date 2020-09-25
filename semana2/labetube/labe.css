@@ -8,7 +8,7 @@ body{
     height: 50vh;
     padding: 0;
     margin: 0;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Manrope', sans-serif;
     font-style: italic;
     background-color: pink;
 }
@@ -54,11 +54,10 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Indie Flower', cursive;
     font-size: 30px;
     color: white;
     margin-left: 40%;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Manrope', sans-serif;
     text-align: center;
     gap: 15px;
     padding: 10px;
@@ -66,7 +65,7 @@ footer{
 
 #name{
     display: flex;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Manrope', sans-serif;
     font-size: 35px;
     color: white;
     margin: 20px;
@@ -104,24 +103,16 @@ footer{
 
 @media screen and (min-device-width: 421px) and (max-device-width: 800px){
 
-    body{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        font-family: "Ranchers", cursive;
-        background-color: pink;
-    }
-
     ul{
         display: grid;
         grid-template: 1fr / 1fr;
+        margin: 15px;
     }
 
     header, #exemplo{
-        display: grid;
+        display: block;
         grid-template: 1fr / 1fr;
-        align-items: baseline;
+        align-items: center;
     }
 
     foot{
@@ -184,18 +175,10 @@ footer{
         justify-content: center;
         padding-right: 30vw;
     }
+    
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 420px){
-
-    body{
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        font-family: "Ranchers", cursive;
-        background-color: pink;
-    }
 
     ul{
         display: grid;
@@ -205,9 +188,10 @@ footer{
     #primeiro{
         display: grid;
         width: 80vw;
-        height: 40vh;
+        height: 30vh;
         justify-items: center;
         align-items: center;
+        margin: 5px;
     }
 
     #name{
@@ -233,5 +217,9 @@ footer{
         height: 70vh;
         justify-content: center;
         padding-right: 30vw;
+    }
+
+    #textos{
+        text-decoration: none;
     }
 }
