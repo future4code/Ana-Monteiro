@@ -3,3 +3,43 @@
     padding: 0;
 }
 
+
+body{
+    font-family: 'Lobster', cursive;
+    background-color: #403C36;
+    color: #E9F0F2;
+}
+
+/*acertando o cabeçalho*/
+header{
+    background-color: #363B40;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li{
+    list-style: none;
+}
+
+/*acertando a logo e imagens*/
+
+.logo{
+    height: 20vh;
+}
+
+.face, .insta, .twitter, .whats{
+    width: 5vw;
+}
+
+.produto1, .produto2, .produto3, .produto4, .produto5 {
+    width: 20vw;
+    margin: 5px;
+    display: flex;
+    border-style: dotted;
+    border-color: #D0D7D9;
+    border-width: 10px;
+}
+
