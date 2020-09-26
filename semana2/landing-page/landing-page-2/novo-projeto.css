@@ -16,7 +16,7 @@ body{
 /*Configurando o header*/
 
 header{
-    background-color: rgb(252,92,92,0.7);
+    background-color: #F25C5C;
     display: flex;
     justify-content: flex-start;
 }
@@ -34,7 +34,7 @@ ul{
 
 li{
     list-style: none;
-    color: rgb(241, 219, 219, 0.8);
+    color: #F2F2F2;
 }
 
 /*Diminuindo a logo*/
@@ -43,12 +43,13 @@ li{
     width: 15%;
 }
 
-/*melhorando conteúdo da section*/
+/*melhorando conteúdo da section1*/
 
-section{
+#section1{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    background-color: #F2F2F2;
 }
 
 .imgmoto{
@@ -59,9 +60,32 @@ h1{
     font-size: 1em;
     padding: 2em;
     text-align: center;
+    color: #F25C5C;
 }
 
 p{
     font-size: 0.5em;
     padding-left: 11em;
+    color: #F25C5C;
+}
+
+/*melhorando conteúdo da section2 */
+
+#section2{
+    background-color: #F25C5C;
+    height: 7em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    background-size: 2em;
+    border-radius: 10em;
+    height: 5em;
+    padding-top: 2em;
+
+
 }
