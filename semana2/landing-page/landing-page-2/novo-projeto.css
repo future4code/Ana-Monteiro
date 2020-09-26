@@ -1,0 +1,67 @@
+
+/*Dando um reset e mexendo no body*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-size: 8vh;
+    font-family: 'Dancing Script', cursive;
+}
+
+/*Configurando o header*/
+
+header{
+    background-color: rgb(252,92,92,0.7);
+    display: flex;
+    justify-content: flex-start;
+}
+
+/*Configurando os escritos Quem somos, Como funciona*/
+
+ul{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8vh;
+}
+
+li{
+    list-style: none;
+    color: rgb(241, 219, 219, 0.8);
+}
+
+/*Diminuindo a logo*/
+
+.logo{
+    width: 15%;
+}
+
+/*melhorando conteúdo da section*/
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.imgmoto{
+    width: 80vh;
+}
+
+h1{
+    font-size: 1em;
+    padding: 2em;
+    text-align: center;
+}
+
+p{
+    font-size: 0.5em;
+    padding-left: 11em;
+}
