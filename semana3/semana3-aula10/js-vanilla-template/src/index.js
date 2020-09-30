@@ -37,6 +37,68 @@ console.log('c. ', array.length) -> imprime c.(espaço) 11 : logo fica assim: c.
 let i = 0
 console.log('d. ', array[i]) -> aqui ele imprime d. 3 ( ele imprime o primeiro index do elemento que é 3)
 
-array[i+1] = 19 -> array [3+1] -> array [4] = 19 
+array[i+1] = 19 -> array [0+1] -> array [1] = 19 
 console.log ('e. ', array) -> ele imprime uma lista [3, 19, 4, 5, 6,...]
+
+const valor = array[i+6] -> const valor = array [6]
+console.log('f. ', valor) -> ele imprime f. 9
+
+/*Executando exercício1*/
+
+/*let idade = prompt ("Qual a sua idade?")
+
+let idadeMelhorAmiga = prompt ("Qual a idade da sua melhor amiga?")
+
+const maior = Number(idade) > Number(idadeMelhorAmiga)
+
+const diferenca = Number(idade) - Number(idadeMelhorAmiga)
+
+console.log("Sua idade é maior que a da sua melhor amiga?", maior)
+
+console.log(diferenca)*/
+
+/*Exercício 2*/
+
+/*let par = prompt("Insira um número par, por favor")
+
+let numero = Number(par)
+
+console.log(numero%2)*/
+
+/* Quando eu insiro o número par, ele dá o valor 0 como resto, isso não muda, e só aparece o 0*/
+/* Quando eu insiro o número impar, ele dá sempre valor 1 como resto, e aparece sempre o 1*/
+
+/*Exercício 3*/
+
+let listaDeTarefas = []
+
+let tarefa1 = prompt("Cite uma tarefa do seu dia")
+let tarefa2= prompt ("Cite sua segunda tarefa do dia")
+let tarefa3 = prompt("Cite a terceira tarefa do seu dia")
+
+listaDeTarefas.push(tarefa1)
+listaDeTarefas.push(tarefa2)
+listaDeTarefas.push(tarefa3)
+
+console.log(listaDeTarefas)
+
+let digite = prompt ("Digite o índice de uma tarefa que você realizou")
+
+listaDeTarefas.splice(Number(digite),1)
+
+console.log(listaDeTarefas)
+
+/*Exercício 4*/
+
+let nome = prompt ("Qual o seu nome?")
+
+let email = prompt("Qual seu email?")
+
+console.log ("O e-mail " + email + " foi cadastrado com sucesso.Seja bem-vinda(o) " + nome + "!")
+
+
+
+
+
+
 
