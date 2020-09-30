@@ -100,7 +100,7 @@ c)Vai ter um erro no console sim, porque ele dá erro porque o if não está dec
 
 /*Exercício 7*/
 
-/*let genero = prompt ("Qual filme você vai assistir?").toLowerCase()
+/*let genero = prompt ("Qual genero de filme você vai assistir?").toLowerCase()
 let valor = Number(prompt("Qual o preço do ingresso?"))
 
 if (genero === "fantasia" && valor <= 15){
@@ -108,6 +108,93 @@ if (genero === "fantasia" && valor <= 15){
 } else {
     console.log ("Escolha outro filme!")
 }*/
+
+/*Desafio 1*/
+
+/*const genero = prompt ("Qual genero filme você vai assistir?").toLowerCase()
+const valor = Number (prompt("Qual o preço do ingresso?"))
+const snack = prompt ("Qual snack você quer comprar? pipoca, chocolate, doces, outros?")
+
+if (genero === "fantasia" && valor <= 15){
+    const snackEscolhido = []
+    snackEscolhido.push(snack)
+    console.log(`Bom filme! e aproveite seu ${snack}!!`)
+
+} else {
+    console.log ("Escolha outro filme! =(")
+}*/
+
+/*Desafio 2*/
+
+let etapaDoJogo = prompt ("Qual a etapa do jogo? Digite SF (para semi-final), DT (para decisão de terceiro lugar").toLowerCase()
+let categoria = Number (prompt("Escolha uma categoria: 1, 2, 3 e 4: "))
+const numeroIngressos = Number (prompt("Informe quantos ingressos você quer:"))
+let valorDoIngresso
+let totalValor = valorDoIngresso * numeroIngressos
+let nomeCompleto = prompt ("Qual seu nome completo?")
+if ( etapaDoJogo === "sf" ){
+    etapaDoJogo = "Semi-finalíssima"
+    switch ( categoria ){
+        case 1 :
+            valorDoIngresso = 1320
+            break;
+        case 2 :
+            valorDoIngresso = 880
+            break;
+        case 3 :
+            valorDoIngresso = 550
+            break;
+        case 4 :
+            valorDoIngresso = 220
+            break;
+        default:
+            console.log ("Categoria indisponível no momento, tente mais tarde")
+            break;
+    }   
+}else if ( etapaDoJogo === "dt"){
+    etapaDoJogo = "Decidindo o terceiro lugar!"
+    switch ( categoria ){
+        case 1 :
+            valorDoIngresso = 660
+            break;
+        case 2 :
+            valorDoIngresso = 440
+            break;
+        case 3 :
+            valorDoIngresso = 330
+            break;
+        case 4 :
+            valorDoIngresso = 170
+            break;
+        default:
+            console.log("Categoria não disponível, tente novamente")
+            break;
+       }
+    } else {
+      etapaDoJogo = "Inválida"
+    }
+    let tipoDeJogo = prompt ("Qual o tipo de jogo? do ou in?")
+    if ( tipoDeJogo === "do"){
+        tipoDeJogo = "Nacional"
+    } else if ( tipoDeJogo === "in"){
+        tipoDeJogo = "Internacional"
+        valorDoIngresso = valorDoIngresso *4.3
+    } else {
+        tipoDeJogo = "Inválido"
+    }
+    totalValor = valorDoIngresso * numeroIngressos
+    console.log ("-----Informações da Compra-----")
+    console.log (`Nome do comprador: ${nomeCompleto}`)
+    console.log (`Etapa do jogo: ${etapaDoJogo}`)
+    console.log (`Categoria: ${categoria}`)
+    console.log (`Quantidade de Ingressos: ${numeroIngressos} ingressos`)
+    console.log ("----Valor----")
+    console.log (`Valor do ingresso: ${valorDoIngresso}`)
+    console.log("Valor total: " + totalValor)
+    
+
+
+
 
 
    
