@@ -11,26 +11,26 @@
  * 
  */
 
+let usuarioPontos = []
+
+let pcPontos = []
 
 console.log("Olá, seja bem-vindox(ax) ao jogo BLACKJACK! UHULLLL, É NÓS PARCERO(A)!")
+/*inicia a rodada*/
 
-let usuarioPontos
-
-let pcPontos
+if (confirm("Nova rodada, partiu?")) {
+      /*Compra cartas*/
 
 const primeirissimaCartaUsuario = comprarCarta()
 const segundissimaCartaUsuario = comprarCarta()
 const primeirissimaCartaPc = comprarCarta()
 const segundissimaCartaPc = comprarCarta()
 
-if (confirm("Nova rodada, partiu?")) {
-   // sorteando cartas usuario
-   // sorteando cartas para o pc
-   // resultado()
-
 
    usuarioPontos = primeirissimaCartaUsuario.valor + segundissimaCartaUsuario.valor
    pcPontos = primeirissimaCartaPc.valor + segundissimaCartaPc.valor
+
+  /* Questão 8*/
 
    if ((primeirissimaCartaUsuario === "A") && (segundissimaCartaUsuario === "A")) {
 
@@ -47,12 +47,28 @@ if (confirm("Nova rodada, partiu?")) {
       console.log("Sortear novamente! =(")
    }
 }
+  /*Questão 9 e 10*/
 
-   confirm(
+   if (confirm(
       (`Suas cartas são: ${primeirissimaCartaUsuario.texto} ${segundissimaCartaUsuario.texto}. A carta revelada do
-      computador é ${ primeirissimaCartaPc.texto} "\n" Deseja comprar mais uma carta?`)
-   )
+      computador é ${ primeirissimaCartaPc.texto} "\n" Deseja comprar mais uma carta?`))
+
+         let novaCarta = comprarCarta
+         let cartasCompradasEscrita = [novaCarta.texto]
+         let cartasCompradas = [novaCarta]
+
+         while (usuarioPontos < 21 && confirm(`Suas cartas são ${primeirissimaCartaUsuario} ${segundissimaCartaUsuario.texto} ${cartasCompradas.texto}
+         A carta revelada do pc é ${primeirissimaCartaPc.texto} Compra mais uma carta?`)){
+            novaCarta = comprarCarta()
+            cartasCompradasEscrita.push(novaCarta.texto)
+            cartasCompradas.push(novaCarta)
+            for (let cartaComprada of cartasCompradas)
+            usuarioPontos += cartaComprada.valor
+         }
+      }
    
+   /*Parte para imprimir se venceu ou ganhou*/
+
    if (usuarioPontos > pcPontos) {
       console.log("PARABÉNS USUÁRIO(A), YOU WIN!")
    } else if (usuarioPontos < pcPontos) {
