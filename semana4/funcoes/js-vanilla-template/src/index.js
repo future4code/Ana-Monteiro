@@ -113,6 +113,195 @@ const resultado = somaDoisNumeros (3,2)
 console.log(resultado)*/
 
 
+/* b.
+  let maiorIgual = (a,b) => {
+  let resultado
+  if (a >= b){
+    resultado = "é maior, ou igual"
+  } else{
+    resultado = "é menor"
+  }
+  return resultado
+}
+
+const result = maiorIgual(3,5)
+console.log(result) */
+
+/*c.
+
+function fraseRepetida(a) {
+  for (let i = 1; i <= 10; i++) {
+      console.log(i,a)        
+  }
+}
+fraseRepetida("Repetindo essa frase ai..")
+console.log(fraseRepetida) */
+
+/* Exercício 6
+
+a. Escreva uma função que receba um array de números e devolva a quantidade de elementos nele
+
+const somaNumeros = (a,b) => {
+  for (let i = 0; i= array.length; i++){
+    console.log(somaNumeros)
+  }
+  return somaNumeros
+}
+
+const array = [10, 23, 45, 78, 90, 52]
+const tamanhoDoArray = (array)
+console.log(tamanhoDoArray) /*
+
+b. Escreva uma função que receba um número e devolva um booleano indicando se ele é par ou não 
+
+const numPar = (a) => {
+  if (a % 2 === 0){
+    return true
+  }else{
+    return false
+  }
+}
+
+const resultado = numPar(57)
+console.log(resultado) /*
+
+c. Escreva uma função que receba um array de números e devolva a quantidade de números pares dentro dele */
+
+/*const numPar = (array) => {
+  let novoArray = [];
+ 
+   for( let i of array){
+       if (i % 2 === 0){
+         novoArray.push(i)
+        }
+   }  
+    return novoArray
+}
+
+
+const array = [10, 23, 45, 78, 90, 52, 35, 67, 84, 22]
+const resultado = numPar(array)
+console.log(resultado)/*
+
+/*d. Reescreva seu código anterior (do item c) de tal forma que ele utilize a função do item b para verificar se o número é par
+
+const numPar = (a) => {
+  if (a % 2 === 0){
+    return "é par"
+  }else{
+    return "é impar"
+  }
+}
+
+const resultado = numPar(58)
+console.log(resultado) 
+
+/*
+
+
+/* Desafio Exercício 1 
+
+EXERCÍCIO 1
+
+Funções são trechos de códigos como quaisquer outros mas que podemos acessá-los mais de uma vez ao longo do código através de invocações/chamadas. Então, funções podem chamar/invocar outras funções também. Sua tarefa é escrever duas funções: 
+
+1.  Escreva uma *arrow function* que recebe um parâmetro e imprime no console esse parâmetro.
+2. Escreva outra *arrow function* que recebe dois valores como parâmetros mas **nenhum retorno.** 
+Faça a soma entre esses valores e chame a sua primeira função mandando este resultado da soma como entrada para imprimí-lo.
+
+Resposta:
+
+/*
+let imprimirConsole = (parametro) => {
+  console.log(parametro)
+}
+
+imprimirConsole("Olá, eu sou o xunda!")
+
+let somaNumeros = (a,b) => {
+  let somando = a + b
+  imprimirConsole(somando)
+}
+
+somaNumeros(20,3)*/
+
+
+/*Desafio Exercício 2 */
+
+/*
+
+a. Escreva uma função que receba um array como parâmetro e retorne um array com apenas os números pares e multiplicados por 2.
+
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+let numParPorDois = (array) => {
+  let arrayParesPorDois = []
+  for (let numero of array){
+   if (numero % 2 === 0){
+     arrayParesPorDois.push(numero * 2)
+   }
+  }
+  return arrayParesPorDois
+}
+  
+const resultado = numParPorDois(numeros)
+console.log(resultado) */
+
+
+/*
+
+b. Escreva uma função que receba um array como parâmetro e retorne o maior número deste array.
+
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+
+let checandoMaiorValor = (array) =>{
+  let maxValor = 0
+  for (let numero of array){
+    if (maxValor < numero){
+      maxValor = numero
+    }
+  }
+  return maxValor
+}
+
+const resultado = checandoMaiorValor(numeros)
+console.log(resultado) */
+
+/*c. Escreva uma função que receba um array como parâmetro e retorne o índice do maior número deste array.
+
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+let checandoMaiorValor = (array) => {
+  let maxValor = 10
+  let index = 0
+  for(let i = 0; i < array.length; i++){
+    if(maxValor < array[i])
+    index = i
+    }
+  }
+  return index
+}
+
+
+const indiceMaxValor = checandoMaiorValor(numeros)
+console.log(indiceMaxValor) */
+
+
+/*
+
+d. Escreva uma função que recebe um array como parâmetro e retorne este array invertido.
+
+let invertendoArray = (array) =>{
+  return array.reverse()
+}
+
+const numeros = [0, 8, 23, 16, 10, 15, 41, 12, 13]
+const arrayInvertido = invertendoArray(array)
+console.log(arrayInvertido) */
+
+
+
+
+
+
 
 
 
