@@ -12,7 +12,7 @@ function apertandoBotao() { // função que executa quando aperta o botão
         conteudo: introduzirConteudo.value // chave que pega o valor da variável introduzirConteudo 
     }
 
-    let listaFormulario = [introduzirTitulo.value + introduzirAutor.value + introduzirConteudo.value]
+    let listaFormulario = [introduzirTitulo.value, " ", introduzirAutor.value ," ", introduzirConteudo.value]
 
     let imprimindo = document.getElementById("container-de-posts") //local para imprimir posts
     imprimindo.innerHTML += `<p>${listaFormulario}</p>` // imprime o conteúdo inserido no array
@@ -21,5 +21,5 @@ function apertandoBotao() { // função que executa quando aperta o botão
     introduzirAutor.value = "" //fazendo zerar o campo valor introduzir autor quando aperto enter
     introduzirConteudo.value = "" // fazendo zerar o campo valor introduzir conteúdo quando aperto enter
 
-    //console.log(listaFormulario)
+    console.log(listaFormulario)
 }
