@@ -35,3 +35,15 @@
 //"Tipo de investimento informado incorreto". Só que quando tentamos imprimir no console esse caso, ele retorna undefined, pois o valorAposInvestimento
 //não está definido ele está assim em cima: let valorAposInvestimento;
 
+//Exercício 3 de interpretação
+
+//Temos uma constante de números [25,12,55,64,121,44,11,84,51,48,14,73,11,283]
+//Fazemos nessa função um const array1, e um const array2 que vai armazenar os valores que passarem pelo for
+//Nessa função o for, ele varre por todo o array, e vai vendo elemento por elemento
+//primeiro if , varrendo numero por numero, ele pega o primeiro número, se esse número dividido por 2 tiver resto zero,
+//o número é incluído na array1 dos números pares. Caso, ele dividindo por 2, seu resultado for diferente de 0, no else
+//ele é puxado para o array2. Precisamos nos atentar que os valores puxados para o array 2, não necessariamente serão só
+//ímpares, incluem-se os ímpares, mas strings por exemplo, entre outros casos.
+//Após isso, vamos imprimir no console na primeira linha : Quantidade total de números 14 (numeros.length retorna o tamanho da array)
+//No console.log(array1.length) : 6 (temos 6 números pares que puxaremos do const numeros)
+// No console.log(array2.length) : 8 (temos 8 números que não são pares)
