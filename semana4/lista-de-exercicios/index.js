@@ -47,3 +47,17 @@
 //Após isso, vamos imprimir no console na primeira linha : Quantidade total de números 14 (numeros.length retorna o tamanho da array)
 //No console.log(array1.length) : 6 (temos 6 números pares que puxaremos do const numeros)
 // No console.log(array2.length) : 8 (temos 8 números que não são pares)
+
+//Exercício 4 de interpretação
+
+//Nesse exercício, nós criamos uma constante chamada: const numeros, com um conjunto de números
+// nós determinamos que a variável let numero1 = Infinity : colocamos o let para que possamos modificar
+//porque vemos que depois, a const numero1 vai se modificando. E aqui, ele diz que o numero1 é igual a infinito.
+//Depois criamos outra variável, let numero2 = 0, dizendo portanto que a variável numero2 é igual a zero
+//Depois nós vamos varrer em cada número do array, varrendo um por um.. por exemplo, primeiro vamos passar o número
+// 25 .Se 25 < infinity : logo numero1(o da constante let em cima) = 25. Depois passamos pelo outro if, se o numero, 25 é >
+//que 0, logo o numero2=numero, logo 0=25, ou seja o valor zero passa a ser o número 25.
+//Embaixo, nós damos o console.log nesses valores, o primeiro, console.log(numero1) = 25
+//Embaixo, console.log(numero2) = 25
+//Aqui nós percebemos que, o console.log(numero1) vai pegar sempre o menor valor, e o console.log(numero2) sempre os maiores valores
+//
