@@ -61,3 +61,37 @@
 //Embaixo, console.log(numero2) = 25
 //Aqui nós percebemos que, o console.log(numero1) vai pegar sempre o menor valor, e o console.log(numero2) sempre os maiores valores
 //
+
+//Exercícios de lógica de programação
+
+//Exercício 1
+
+//Cite 3 maneiras de se percorrer/iterar uma lista. Faça um programa para exemplificar.
+
+//Primeira forma : uso de for para retornar os valores do array
+
+/*const bananinha = [10,30,40,50,60]
+
+for (let i=0; i< 5; i++) {
+    const banana = bananinha[i]
+    console.log(banana)
+}*/
+
+// Segunda forma : uso de for..of : retorna os elementos da array cajuzinhos
+
+/*const cajuzinhos = [20,10,18,50]
+
+for (let caju of cajuzinhos) {
+    console.log(caju)
+}
+*/
+
+//Terceira forma: uso de splice : na posição de índice 1, remova 0 elementos e adicione 'não' a essa posição
+
+ /*let array= ['oi','estou','muito','bem']
+
+ array.splice(1,0,'não')
+ console.log(array)*/
+
+
+
