@@ -123,3 +123,23 @@ for (let caju of cajuzinhos) {
 // false && false || true
 // false || true = true
 
+//Exercício 3
+
+const quantidadeDeNumerosPares = Number(prompt('Digite a quantidade N de números pares que você quer ver'))
+
+    let i = 1
+	let numero = 0
+	
+	while(i <= quantidadeDeNumerosPares) {
+	  if(numero % 2 === 0){
+	    console.log(numero)
+        i++
+      }
+      numero += 1
+    }
+    
+//O código não funciona porque preciso colocar o incremento do while i++, porque senão ele roda infinitamente e entra no loop infinito.
+//Precisa ter uma variável para o index, o i, que o menino fez let i = 0, porém o let i = 0 não vai retornar os valores que queremos,
+//quando digitarmos 5, ele retornarian 0,2,4,6,8 e 10 e queremos que retorne 0,2,4,6,8. Logo precisa ser let i = 1.
+// E precisamos de outra variável, o número, para ele ir pegando
+// os números pares : numero%2 ===0, e colocar o numero += 1 para ele ir pegando os valores pares que digitarmos.
