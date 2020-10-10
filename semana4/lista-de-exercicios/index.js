@@ -125,7 +125,7 @@ for (let caju of cajuzinhos) {
 
 //Exercício 3
 
-const quantidadeDeNumerosPares = Number(prompt('Digite a quantidade N de números pares que você quer ver'))
+/*const quantidadeDeNumerosPares = Number(prompt('Digite a quantidade N de números pares que você quer ver'))
 
     let i = 1
 	let numero = 0
@@ -137,9 +137,29 @@ const quantidadeDeNumerosPares = Number(prompt('Digite a quantidade N de número
       }
       numero += 1
     }
+    */
     
 //O código não funciona porque preciso colocar o incremento do while i++, porque senão ele roda infinitamente e entra no loop infinito.
 //Precisa ter uma variável para o index, o i, que o menino fez let i = 0, porém o let i = 0 não vai retornar os valores que queremos,
 //quando digitarmos 5, ele retornarian 0,2,4,6,8 e 10 e queremos que retorne 0,2,4,6,8. Logo precisa ser let i = 1.
 // E precisamos de outra variável, o número, para ele ir pegando
-// os números pares : numero%2 ===0, e colocar o numero += 1 para ele ir pegando os valores pares que digitarmos.
+// os números pares : numero%2 ===0, e colocar o numero += 1 para ele ir pegando os valores pares que digitarmos
+
+
+//Exercício 4
+
+/*
+let trigonometria = (a,b,c) => {
+    if (a === b === c){
+        console.log("É equilátero")
+    } else if ((a === b) || (b === c) || (c === a)){
+        console.log("É isósceles")
+    } else { ((a !== b !== c)) 
+        console.log("É escaleno")
+    }
+    return (a,b,c)
+}
+
+const resultado = trigonometria(9,9,9)
+
+*/
