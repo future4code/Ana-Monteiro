@@ -93,5 +93,33 @@ for (let caju of cajuzinhos) {
  array.splice(1,0,'não')
  console.log(array)*/
 
+//Exercício 2
 
+// const booleano1 = true
+//const booleano2 = false
+//const booleano3 = !booleano2 = true
+//const booleano4 = !booleano3 = false
+
+// a) booleano1 && booleano2 && !booleano4
+// true && false && false
+// false
+
+// b) (booleano1 && booleano2) || !booleano3
+// (true && false) || !true
+//(true && false) || false
+// false || false = false
+
+//c) (booleano2 || booleano3) && (booleano4 || booleano1)
+// (false || true) && (false || true)
+// true && true = true
+
+//d) !(booleano2 && booleano3) || !(booleano1 && booleano3)
+// !(false && true) || !(true && true)
+// !(false) || !(true)
+// true || false = true
+
+//e)!(booleano1) && !(booleano3) || (!booleano4 && booleano3 && booleano3)
+// !(true) && !(true) || (true && true && true)
+// false && false || true
+// false || true = true
 
