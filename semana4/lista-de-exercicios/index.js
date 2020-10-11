@@ -284,6 +284,7 @@ console.log(recebendoMensagem)
 
 
 /*
+
 let criaRetangulo = (lado1,lado2) =>{
     const retangulo = {
         largura: lado1,
@@ -297,6 +298,30 @@ let criaRetangulo = (lado1,lado2) =>{
 
 console.log(criaRetangulo(4,3))
 /*
+
+//--------------------------------------------------------------Exercício 3 - Objetos
+
+//Crie um objeto para representar seu filme favorito. Ele deve ter as seguintes propriedades: título, ano, diretor e atores/atrizes (lista com pelo menos 2 atores/atrizes). 
+//Imprima na tela a seguinte string, baseada nos valores do objeto:
+//Venha assistir ao filme NOME DO FILME, de ANO, dirigido por DIRETOR e estrelado por ATOR 1, ATRIZ 2, ATOR n.
+//A lista de atores/atrizes deve ser impressa inteira, independente do tamanho da lista.*/
+
+/*
+
+const filmeFavorito = {
+    Título: 'A procura da Felicidade',
+    Ano: 2007,
+    Diretora: 'Gabriele Muccino',
+    Ator1: "Will Smith",
+    Atriz: "Thandie Newton",
+    Ator2: "Jaden Smith"
+}
+
+console.log(`Venha assistir ao filme ${filmeFavorito.Título}, de ${filmeFavorito.Ano}, dirigido pela ${filmeFavorito.Diretora} e estrelado por ${filmeFavorito.Ator1}, ${filmeFavorito.Atriz},${filmeFavorito.Ator2}`)
+
+*/
+
+
 
 
 
