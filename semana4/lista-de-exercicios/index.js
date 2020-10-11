@@ -388,9 +388,9 @@ console.log(somenteCrianças)
 */
 
 
-//Exercício 2 - Funções de Array
+//-----------------------------------------------------------------------------Exercício 2 - Funções de Array
 
-const array = [1, 2, 3, 4, 5, 6]
+//const array = [1, 2, 3, 4, 5, 6]
 
 //a) Escreva uma função que retorne um array com as entradas multiplicadas por 2. Isto é [2, 4, 6, 8, 10, 12]
 
@@ -411,6 +411,21 @@ const arrayVezesTres = array.map((numero)=>{
 })
 
 console.log(arrayVezesTres)
+
+*/
+
+//c) Escreva uma função que retorne um array de strings dizendo: "${número} é par/impar". Isto é: ["1 é impar", "2 é par", "3 é impar", "4 é par", "5 é impar", "6 é par"] 
+
+/*
+const arrayStrings = array.map((numero)=>{
+        if (numero % 2 === 0){
+            console.log (`${numero} é par`)
+        }else{
+            console.log (`${numero} é ímpar`)
+        }
+})
+
+console.log (arrayDeStrings)
 
 */
 
