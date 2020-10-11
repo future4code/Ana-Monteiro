@@ -321,6 +321,32 @@ console.log(`Venha assistir ao filme ${filmeFavorito.Título}, de ${filmeFavorit
 
 */
 
+//------------------------------------------------------------Exercício 4 - Objetos
+
+//Crie um objeto que represente uma pessoa qualquer, com as propriedades de nome, idade, email e endereco.
+// Crie uma função chamada anonimizarPessoa, que deverá retornar um novo objeto com as mesmas propriedades, mas com a string ANÔNIMO no lugar do nome.
+// O objeto original deve ser mantido com o nome da pessoa.
+
+/*
+const nomePessoa ={
+    nome: "Bananinha",
+    idade: 25,
+    email:"ilovebanana@gmail.com",
+    endereço: "Rua dos bananais, 286"
+}
+
+let anonimizarPessoa = () =>{
+    const novaPessoa= {
+    ...nomePessoa,
+    nome: "anônimo"
+    }
+    console.log(novaPessoa)
+}
+
+anonimizarPessoa()
+
+*/
+
 
 
 
