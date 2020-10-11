@@ -431,6 +431,7 @@ console.log (arrayDeStrings)
 
 //Exercício 3 - Funções de Array
 
+/*
 const pessoas = [
 	{ nome: "Paula", idade: 12, altura: 1.8},
 	{ nome: "João", idade: 20, altura: 1.3},
@@ -440,7 +441,10 @@ const pessoas = [
 	{ nome: "Soter", idade: 70, altura: 1.9}
 ]
 
-//a)a) Escreva uma função que receba este array e devolva outro array somente com as pessoas que tem permissão de entrar no brinquedo:
+*/
+
+//a) Escreva uma função que receba este array e devolva outro array somente com as pessoas que tem permissão de entrar no brinquedo:
+
 
 /*
 const permissãoBrinquedo = pessoas.filter((pessoas)=>{
@@ -451,7 +455,23 @@ const permissãoBrinquedo = pessoas.filter((pessoas)=>{
 
 console.log(permissãoBrinquedo)
 
+*/
+
+
+
+//b) Escreva uma função que receba este array e devolva outro array somente com as pessoas que não podem entrar no brinquedo.*/
+
+
 /*
+const semPermissãoBrinquedo = pessoas.filter((pessoas)=>{
+    if(pessoas.altura < 1.50 || pessoas.idade < 14 || pessoas.idade > 60){
+        return true
+    }
+})
+
+console.log(semPermissãoBrinquedo)
+
+*/
 
 
 
