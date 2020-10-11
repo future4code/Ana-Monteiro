@@ -361,6 +361,7 @@ const pessoas = [
 
 //a) Faça uma função que retorne um novo array só com os adultos (pessoas com idade igual ou superior a 20)/*
 
+/*
 const somenteAdultos = pessoas.filter((adulto) =>{
     if(adulto.idade >= 20){
         return true
@@ -368,6 +369,21 @@ const somenteAdultos = pessoas.filter((adulto) =>{
 })
 
 console.log(somenteAdultos)
+
+*/
+
+//b) Faça uma função que retorne um novo array só com as crianças/adolescentes (pessoas com idade inferior a 20)
+
+/*
+const somenteCrianças = pessoas.filter((criança)=>{
+    if(criança.idade < 20){
+        return true
+    }
+})
+
+console.log(somenteCrianças)
+
+*/
 
 
 
