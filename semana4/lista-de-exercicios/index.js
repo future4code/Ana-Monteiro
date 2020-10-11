@@ -163,3 +163,42 @@ let trigonometria = (a,b,c) => {
 const resultado = trigonometria(9,9,9)
 
 */
+
+//Exercício 5
+
+/*const numA = Number(prompt("Digite um número"))
+const numB = Number(prompt("Digite outro número"))
+
+let numerosDigitados = () => {
+    if (numA > numB){
+        console.log (`O maior valor é ${numA}`)
+    } else if ( numB > numA){
+        console.log(`O maior valor é ${numB}`)
+    } else{
+        console.log("São iguais")
+    }
+
+    if (numA % numB === 0){
+        console.log(`${numA} é divisível por ${numB}`)
+    }else{
+        console.log("Não são divisíveis entre si!")
+    }
+    
+    let resultado1 = numA - numB
+    if(resultado1 >= 0){
+        console.log(`A diferença é ${resultado1}`)
+    } else {
+        console.log("Soma negativa1! não rola!")
+    }
+
+    let resultado2 = numB - numA
+    if(resultado2 >= 0){
+        console.log(`A diferença é ${resultado2}`)
+    } else{
+        console.log("Soma negativa2! não rola!")
+    }
+    return
+}
+
+numerosDigitados()*/
+
