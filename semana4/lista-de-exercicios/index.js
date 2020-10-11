@@ -202,3 +202,41 @@ let numerosDigitados = () => {
 
 numerosDigitados()*/
 
+
+//Exercícios de funções
+
+//Exercício 1
+
+/*
+let array = [12,2,25,76,85,96]
+
+let maiorValor = (array) =>{
+    let maiorValor = 0
+    for( let numero1 of array){
+        if (numero1 > maiorValor){
+            maiorValor = numero1
+        }
+        array.splice(5,1)
+    }
+    return maiorValor
+    
+}
+
+const resultado1 = maiorValor(array)
+console.log(`O segundo maior valor da array é ${resultado1}`)
+
+let menorValor = (array) =>{
+    let menorValor = Infinity
+    for (let numero2 of array){
+        if (numero2 < menorValor){
+            menorValor = numero2
+        }
+        array.splice(1,1)
+    }  
+    return menorValor
+}
+
+const resultado2 = menorValor(array)
+console.log(`O segundo menor valor da array é ${resultado2}`) 
+
+*/
