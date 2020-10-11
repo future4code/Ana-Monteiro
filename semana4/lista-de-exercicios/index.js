@@ -240,3 +240,15 @@ const resultado2 = menorValor(array)
 console.log(`O segundo menor valor da array é ${resultado2}`) 
 
 */
+
+//Exercício 2 - funções
+
+/*
+let mandandoMensagem = () => {
+    alert ("Hello Future4")
+}
+
+const recebendoMensagem = mandandoMensagem()
+console.log(recebendoMensagem)
+
+*/
