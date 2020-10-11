@@ -46,7 +46,7 @@
 //ímpares, incluem-se os ímpares, mas strings por exemplo, entre outros casos.
 //Após isso, vamos imprimir no console na primeira linha : Quantidade total de números 14 (numeros.length retorna o tamanho da array)
 //No console.log(array1.length) : 6 (temos 6 números pares que puxaremos do const numeros)
-// No console.log(array2.length) : 8 (temos 8 números que não são pares)
+// No console.log(array2.length) : 8 (temos 8 números que não são pares)/*
 
 //Exercício 4 de interpretação
 
@@ -346,6 +346,32 @@ let anonimizarPessoa = () =>{
 anonimizarPessoa()
 
 */
+
+//Exercícios - Funções de Array
+
+//Exercício 1
+
+const pessoas = [
+    { nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+
+
+//a) Faça uma função que retorne um novo array só com os adultos (pessoas com idade igual ou superior a 20)/*
+
+const somenteAdultos = pessoas.filter((adulto) =>{
+    if(adulto.idade >= 20){
+        return true
+    }
+})
+
+console.log(somenteAdultos)
+
+
+
+
 
 
 
