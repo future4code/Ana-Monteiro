@@ -403,6 +403,19 @@ const arrayVezesDois = array.map((numero) => {
 console.log(arrayVezesDois)
 */
 
+//b) Escreva uma função que retorne um array com as entradas multiplicadas por 3 e como strings. Isto é: ["3", "6", "9","12","15", "18"] 
+
+/*
+const arrayVezesTres = array.map((numero)=>{
+    return String(numero*3) // a string aqui precisa estar em maiúsculo, para funcionar!!!
+})
+
+console.log(arrayVezesTres)
+
+*/
+
+
+
 
 
 
