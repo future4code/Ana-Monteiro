@@ -146,7 +146,7 @@ for (let caju of cajuzinhos) {
 // os números pares : numero%2 ===0, e colocar o numero += 1 para ele ir pegando os valores pares que digitarmos
 
 
-//Exercício 4
+//Exercício 4 - lógica de programação
 
 /*
 let trigonometria = (a,b,c) => {
@@ -164,7 +164,7 @@ const resultado = trigonometria(9,9,9)
 
 */
 
-//Exercício 5
+//Exercício 5 - lógica de programação
 
 /*const numA = Number(prompt("Digite um número"))
 const numB = Number(prompt("Digite outro número"))
@@ -207,6 +207,10 @@ numerosDigitados()*/
 
 //Exercício 1
 
+//Escreva uma função que receba um array de números e imprima na tela o segundo maior e o segundo menor número.
+// Em seguida, invoque essa função. (Não é permitido usar funções de ordenação de vetores.)
+
+
 /*
 let array = [12,2,25,76,85,96]
 
@@ -241,9 +245,13 @@ console.log(`O segundo menor valor da array é ${resultado2}`)
 
 */
 
+
 //Exercício 2 - funções
 
+//Escreva uma função não nomeada que faça um alert("Hello Future4");. Em seguida, invoque essa função.
+
 /*
+
 let mandandoMensagem = () => {
     alert ("Hello Future4")
 }
@@ -252,3 +260,18 @@ const recebendoMensagem = mandandoMensagem()
 console.log(recebendoMensagem)
 
 */
+
+
+
+//Exercícios de objetos
+
+// Exercício 1
+
+//Explique com suas palavras o que são e quando podemos/devemos utilizar arrays e objetos
+
+// Objetos nos permite representar dados mais complexos, de forma mais organizada, como uma gaveta de cozinha bem separadinha
+//com garfos, colheres e facas, uma gaveta subdividida e muito organizada. Podemos usar quando necessitamos que o código que
+//estamos fazendo esteja muito bem organizadinho.
+
+//Arrays é como uma matriz de valores, coleção de um ou mais objetos, do mesmo tipo e permite que acessemos o elemento pelo índice dele.
+//Devemos criar arrays quando temos poucos, ou vários objetos, já que cada objeto é um elemento de uma array.
