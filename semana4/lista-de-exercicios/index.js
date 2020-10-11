@@ -351,12 +351,14 @@ anonimizarPessoa()
 
 //Exercício 1
 
+/*
 const pessoas = [
     { nome: "Pedro", idade: 20 },
 	{ nome: "João", idade: 10 },
 	{ nome: "Paula", idade: 12 },
 	{ nome: "Artur", idade: 89 } 
 ]
+*/
 
 
 //a) Faça uma função que retorne um novo array só com os adultos (pessoas com idade igual ou superior a 20)/*
@@ -384,6 +386,24 @@ const somenteCrianças = pessoas.filter((criança)=>{
 console.log(somenteCrianças)
 
 */
+
+
+//Exercício 2 - Funções de Array
+
+const array = [1, 2, 3, 4, 5, 6]
+
+//a) Escreva uma função que retorne um array com as entradas multiplicadas por 2. Isto é [2, 4, 6, 8, 10, 12]
+
+/*
+const arrayVezesDois = array.map((numero) => {  
+        return numero * 2
+
+})
+
+console.log(arrayVezesDois)
+*/
+
+
 
 
 
