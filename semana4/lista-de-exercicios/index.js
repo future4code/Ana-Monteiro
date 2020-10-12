@@ -473,6 +473,37 @@ console.log(semPermissãoBrinquedo)
 
 */
 
+//Exercício 4 - Funções de Array
+
+/*
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const mensagemConsulta = consultas.map((pessoas)=>{
+    let senhor
+    let lembrar
+    if(pessoas.genero === "masculino"){
+        senhor = "Sr."
+        lembrar = "lembrá-lo"
+    }else{
+        senhor ="Sra."
+        lembrar="lembrá-la"
+    }
+
+    if (pessoas.cancelada === true){
+        return(`Olá ${senhor} ${pessoas.nome}. Infelizmente sua consulta marcada para o dia ${pessoas.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`)
+    } else if  (pessoas.cancelada === false){
+        return(`Olá, ${senhor} ${pessoas.nome}. Estamos enviando esta mensagem para ${lembrar} da sua consulta no dia ${pessoas.dataDaConsulta}. Por favor, acuse o recebimento deste email`)
+    }
+})
+
+console.log(mensagemConsulta)
+
+*/
 
 
 
