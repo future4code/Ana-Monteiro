@@ -52,6 +52,7 @@ class Post extends React.Component {
     numeroCurtidas: 0,
     comentando: false,
     numeroComentarios: 0,
+    arrayDeComentarios : []
   }
 
   onClickCurtida = () => {
@@ -76,12 +77,17 @@ class Post extends React.Component {
     })
   }
 
-  aoEnviarComentario = () => {
+  aoEnviarComentario =(comentario) =>{
+    const novoComentario = comentario
+    const novoArrayDeComentarios = [...this.state.arrayDeComentarios,
+      novoComentario]
     this.setState({
       comentando: false,
-      numeroComentarios: this.state.numeroComentarios + 1
+      numeroComentarios: this.state.numeroComentarios + 1,
+      arrayDeComentarios: novoArrayDeComentarios
     })
   }
+
 
   render() {
     let iconeCurtida
@@ -97,6 +103,10 @@ class Post extends React.Component {
     if(this.state.comentando) {
       componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario} />
     }
+
+    const listaDeComentario = this.state.arrayDeComentarios.map((comentario)=>{
+      return <p>{comentario}</p>
+    })
 
 
     return (
@@ -128,6 +138,7 @@ class Post extends React.Component {
         />
         </PostFooter>
       {componenteComentario}
+      <div>{listaDeComentario}</div>
       </PostContainer>
       )
   }
