@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Post from './components/Post/Post';
-import IMAGEM from './img/baixados.jpg'
+import Imagem from './img/baixados.jpg'
 
 class App extends React.Component {
 
@@ -23,9 +23,11 @@ class App extends React.Component {
 
       {
         nomeUsuario: "Carlinha",
-        fotoUsuario: IMAGEM,
+        fotoUsuario: Imagem,
         fotoPost: "https://picsum.photos/id/100/50/50"
       }
+
+
     ],
 
     valorInputNomeUsuario: "",
@@ -105,8 +107,9 @@ class App extends React.Component {
 
         <button onClick ={this.adicionaPost}>Adicionar</button>
 
-      </div>
+      
       <div>{listaDeComponentes}</div>
+      </div>
       </div>
 
     );

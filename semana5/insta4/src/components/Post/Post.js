@@ -1,5 +1,5 @@
 import React from 'react'
-import './Post.css'
+
 
 import {IconeComContador} from '../IconeComContador/IconeComContador'
 
@@ -7,12 +7,13 @@ import iconeCoracaoBranco from '../../img/favorite-white.svg'
 import iconeCoracaoPreto from '../../img/favorite.svg'
 import iconeComentario from '../../img/comment_icon.svg'
 import {SecaoComentario} from '../SecaoComentario/SecaoComentario'
-import styled from "styled-components"
+import styled from 'styled-components'
 
 const PostContainer = styled.div`
   border: 1px solid gray;
   width: 300px;
   margin-bottom: 10px;
+  
 `
 
 const PostHeader = styled.div`
@@ -30,7 +31,7 @@ const PostFooter = styled.div`
   justify-content: space-between;
 `
 
-const UserPhoto = styled.div`
+const UserPhoto = styled.img`
 
   height: 30px;
   width: 30px;
@@ -38,7 +39,7 @@ const UserPhoto = styled.div`
   border-radius: 50%;
 `
 
-const PostPhoto = styled.div`
+const PostPhoto = styled.img`
   width: 100%;
 `
 
@@ -53,7 +54,7 @@ class Post extends React.Component {
     numeroComentarios: 0,
   }
 
-  onClickCurtida = (event) => {
+  onClickCurtida = () => {
     this.setState({
       curtido: !this.state.curtido
     })
@@ -94,7 +95,7 @@ class Post extends React.Component {
     let componenteComentario
 
     if(this.state.comentando) {
-      componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario}/>
+      componenteComentario = <SecaoComentario aoEnviar={this.aoEnviarComentario} />
     }
 
 
@@ -106,7 +107,7 @@ class Post extends React.Component {
       <PostHeader>
         <UserPhoto src ={this.props.fotoUsuario} alt='Imagem do Usuário'></UserPhoto>
         <p>{this.props.nomeUsuario}</p>
-        </PostHeader>
+      </PostHeader>
 
       <PostPhoto src ={this.props.fotoPost} alt ="Imagem"></PostPhoto>
 
