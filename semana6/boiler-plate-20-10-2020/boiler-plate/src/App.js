@@ -57,6 +57,8 @@ class App extends React.Component {
 
     this.setState({tarefas: novaListaTarefa})
 
+    this.setState ({inputValue: ""})
+
   }
 
   selectTarefa = (id) => {
