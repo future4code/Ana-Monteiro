@@ -31,15 +31,17 @@ class App extends React.Component {
 
       }
 
-  componentDidUpdate() {
-
-  };
+  componentDidUpdate(){
+    localStorage.setItem("tarefas", JSON.stringify(this.state.tarefas))
+  }
 
   componentDidMount() {
-
+    if(localStorage.getItem("tarefas")){
+      this.setState({tarefas: JSON.parse(localStorage.getItem("tarefas"))})
+    }
   };
 
-  onChangeInput = (event) => {
+  onChangeInput = (event) => { 
     this.setState({inputValue: event.target.value})
 
   }
@@ -59,6 +61,10 @@ class App extends React.Component {
 
     this.setState ({inputValue: ""})
 
+  }
+
+  removerTarefa = () => {
+    
   }
 
   selectTarefa = (id) => {
