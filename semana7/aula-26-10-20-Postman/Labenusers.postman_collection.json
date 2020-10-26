@@ -33,7 +33,7 @@
 			"response": []
 		},
 		{
-			"name": "createPlaylist",
+			"name": "create Playlist Feliz",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -45,7 +45,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Playlist Feliz\"\r\n}",
+					"raw": "{\r\n    \"name\": \"Playlist Feliz\"\r\n}\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -69,7 +69,7 @@
 			"response": []
 		},
 		{
-			"name": "Add Track to Playlists",
+			"name": "Add Track to Playlist Feliz",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -113,10 +113,7 @@
 			"response": []
 		},
 		{
-			"name": "Get Playlists Track",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "searchPlaylist",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -126,9 +123,43 @@
 						"type": "text"
 					}
 				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=Playlist Feliz",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Playlist Feliz"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add track to playlist Feliz 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
+					"raw": "{\r\n    \"name\": \"Halo\",\r\n    \"artist\": \"Beyoncé\",\r\n    \"url\": \"https://www.youtube.com/watch?v=VqQeT7wKqvs\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -136,7 +167,373 @@
 					}
 				},
 				"url": {
-					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks?=fcbcceba-9834-4123-96e6-59edb28a403e",
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "fcbcceba-9834-4123-96e6-59edb28a403e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add track playlist Feliz 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Love on Top\",\r\n    \"artist\": \"Beyoncé\",\r\n    \"url\": \"https://www.youtube.com/watch?v=Ob7vObnFUJc\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "fcbcceba-9834-4123-96e6-59edb28a403e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add track playlist Feliz, que não gosto 4",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Vai lá\",\r\n    \"artist\": \"Wesley Safadão\",\r\n    \"url\": \"https://www.youtube.com/watch?v=U8Aoz_vlxFE\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "fcbcceba-9834-4123-96e6-59edb28a403e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove Track From Playlist Feliz",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks",
+						":trackId"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "fcbcceba-9834-4123-96e6-59edb28a403e"
+						},
+						{
+							"key": "trackId",
+							"value": "a7de0d52-484c-4c3e-a5c5-da8bb8b3265c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Playlists Track -  Playlist Feliz",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "fcbcceba-9834-4123-96e6-59edb28a403e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Playlist Triste",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"triste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add track to playlist triste 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Rajadão\",\r\n    \"artist\": \"Pablo Vittar\",\r\n    \"url\": \"https://www.youtube.com/watch?v=naeTvOPmq-U\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "0df20a8d-1f86-48e3-bbb0-61fed4c68a20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add track to playlist triste 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Amor de que\",\r\n    \"artist\": \"Pablo Vittar\",\r\n    \"url\": \"https://www.youtube.com/watch?v=4zJ4i6Az2Ck\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "0df20a8d-1f86-48e3-bbb0-61fed4c68a20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add track to playlist triste 3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Corpo sensual\",\r\n    \"artist\": \"Pablo Vittar\",\r\n    \"url\": \"https://www.youtube.com/watch?v=q6Lw6k7k9Rk\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "0df20a8d-1f86-48e3-bbb0-61fed4c68a20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Playlist Track - Playlist Triste",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks?=0df20a8d-1f86-48e3-bbb0-61fed4c68a20",
 					"protocol": "https",
 					"host": [
 						"us-central1-labenu-apis",
@@ -151,14 +548,48 @@
 					],
 					"query": [
 						{
-							"key": "",
-							"value": "fcbcceba-9834-4123-96e6-59edb28a403e"
+							"key": null,
+							"value": "0df20a8d-1f86-48e3-bbb0-61fed4c68a20"
 						}
 					],
 					"variable": [
 						{
 							"key": "playlistId",
-							"value": "fcbcceba-9834-4123-96e6-59edb28a403e"
+							"value": "0df20a8d-1f86-48e3-bbb0-61fed4c68a20"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Playlist triste",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "anapatricia-monteiro-dumont",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId\n",
+							"value": "0df20a8d-1f86-48e3-bbb0-61fed4c68a20"
 						}
 					]
 				}
