@@ -6,10 +6,7 @@ import axios from "axios";
 
 export default class App extends React.Component {
 
-    state = {
-      inputName: "",
-      inputEmail: ""
-    }
+    
 
 
 
