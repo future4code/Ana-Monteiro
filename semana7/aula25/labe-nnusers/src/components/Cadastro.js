@@ -1,16 +1,35 @@
 import React from "react";
 import axios from "axios";
-import Styled from "styled-components";
+import styled from "styled-components";
 import App from "../App";
 
+const ContainerCadastro = styled.div`
+    border: dotted #A61464;
+    padding: 10px;
+    margin: 10px;
+    background-color: RGB(162,113,99,0.15);
+`
+const TituloFormulario = styled.p`
+   color: #0C0A0D;
+   text-align: center;
+`
+
+const MudarBotao = styled.button`
+    padding: 10px;
+    background-color: pink;
+    text-decoration: none;
+    align-self: center;
+    margin-left: 34em;
+
+`
 
 export default class Cadastro extends React.Component{
 
     state = {
-        name: "",
+        nome: "",
         email: "",
-        nameValue: "",
-        emailValue: ""
+        nomeValor: "",
+        emailValor: ""
     };
 
     pegarUsuario = () => {
@@ -23,7 +42,7 @@ export default class Cadastro extends React.Component{
             }
         )
         .then((response) => {
-            this.setState({name: response.data});
+            this.setState({nome: response.data});
             this.setState({email: response.data})
         })
         .catch((erro) =>{
@@ -33,8 +52,8 @@ export default class Cadastro extends React.Component{
 
     criarUsuario = () => {
         const body = {
-            name: this.state.nameValue,
-            email: this.state.emailValue
+            name: this.state.nomeValor,
+            email: this.state.emailValor
         };
 
         axios
@@ -48,8 +67,7 @@ export default class Cadastro extends React.Component{
             }
         )
         .then((response)=>{
-            this.setState({nameValue: ""})
-            this.setState({emailValue: ""})
+            this.setState({nomeValor: "", emailValor: ""})
             this.pegarUsuario();
             console.log("Legal, você inseriu novo usuário")
         })
@@ -58,36 +76,37 @@ export default class Cadastro extends React.Component{
         })
     };
 
-    onChangeInputName = (event) =>{
-        this.setState({nameValue: event.target.value})
+    onChangeEntradaNome = (event) =>{
+        this.setState({nomeValor: event.target.value})
     };
 
-    onChangeInputEmail = (event)=>{
-        this.setState({emailValue: event.target.value})
+    onChangeEntradaEmail = (event)=>{
+        this.setState({emailValor: event.target.value})
     }
 
     render(){
         return(
             
-            <div>
-                <button onClick={this.props.botaoLogin}>Ver lista cadastrada</button>
+            <ContainerCadastro>
+                <TituloFormulario>
                 <h4>Nome</h4>
                 <input
                 placeholder = "Nome do usuário"
-                value={this.state.nameValue}
-                onChange={this.onChangeInputName}
+                value={this.state.nomeValor}
+                onChange={this.onChangeEntradaNome}
                 />
                 <h4>Email</h4>
                 <input
                 placeholder ="Email do usuário"
-                value={this.state.emailValue}
-                onChange={this.onChangeInputEmail}
+                value={this.state.emailValor}
+                onChange={this.onChangeEntradaEmail}
                 />
-
-                <button onClick ={this.criarUsuario}>Cadastro</button>
+                </TituloFormulario>
+                <MudarBotao onClick ={this.criarUsuario}>Cadastro</MudarBotao>
+    
                 
                 
-            </div>
+            </ContainerCadastro>
         )
     }
 }

@@ -3,38 +3,42 @@ import Cadastro from "./components/Cadastro.js";
 import { render } from '@testing-library/react';
 import ListaUsuarios from './components/ListaUsuarios.js';
 import axios from "axios";
-import Styled from "styled-components";
+import styled from "styled-components";
 import { scryRenderedComponentsWithType } from "react-dom/test-utils";
 
+const MudarBotao1 = styled.button`
+    padding: 10px;
+    background-color: pink;
+    text-decoration: none;
+    align-self: center;
+    margin-left: 34em;
+
+`
 
 
-export default class App extends React.Component {
+class App extends React.Component {
 
   state = {
-    registroUsuario: true
+   cadastroPagina: true
   }
 
-  indoListaUsuarios = () => {
+  mudarPagina = () => {
     this.setState({
-      registroUsuario: false,
+     cadastroPagina: !this.state.cadastroPagina,
     });
   }
 
 
 render() {
-  const aparecerTela = () => {
-    if(this.state.registroUsuario){
-      return <ListaUsuarios botaoLogin={this.fazerlogin} />
-    }
-  }
+  const aparecerTela = this.state.cadastroPagina? (<Cadastro />) : <ListaUsuarios />
+
   return(
     <div>  
-  <Cadastro/>
-  <ListaUsuarios/>
-
-  {aparecerTela}
+    {aparecerTela}
+    <MudarBotao1 onClick = {this.mudarPagina}>Mudar de Página </MudarBotao1>
   </div>
   )
-}
+  }
 }
 
+export default App
