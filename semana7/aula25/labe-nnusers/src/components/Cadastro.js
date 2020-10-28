@@ -19,7 +19,7 @@ const MudarBotao = styled.button`
     background-color: pink;
     text-decoration: none;
     align-self: center;
-    margin-left: 34em;
+    margin-left: 450px;
 
 `
 

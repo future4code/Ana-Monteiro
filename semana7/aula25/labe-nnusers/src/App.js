@@ -5,13 +5,14 @@ import ListaUsuarios from './components/ListaUsuarios.js';
 import axios from "axios";
 import styled from "styled-components";
 import { scryRenderedComponentsWithType } from "react-dom/test-utils";
+import DetalheUsuarios from "./components/DetalheUsuarios";
 
 const MudarBotao1 = styled.button`
     padding: 10px;
     background-color: pink;
     text-decoration: none;
     align-self: center;
-    margin-left: 34em;
+    margin-left: 450px;
 
 `
 
@@ -19,7 +20,7 @@ const MudarBotao1 = styled.button`
 class App extends React.Component {
 
   state = {
-   cadastroPagina: true
+   cadastroPagina: true,
   }
 
   mudarPagina = () => {
