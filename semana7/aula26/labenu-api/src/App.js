@@ -7,7 +7,8 @@ class App extends React.Component {
 
   state = {
     rocketList: [],
-    selectedRocketUrl: ""
+    selectedRocketUrl: "",
+    imagem: []
 
   }
   componentDidMount(){
@@ -23,11 +24,13 @@ class App extends React.Component {
 
   onChangeSelect = (event) => {
     console.log("selecionou algo", event.target.value)
-    const apiUrl1 ="https://api.spacexdata.com/v3/rockets/{{rocket_id}}"
+    const apiUrl1 =`https://api.spacexdata.com/v3/rockets/${{rocket_id}}`
     axios.get(apiUrl1).then((response)=> {
       console.log("hauhsuhau")
+      this.setState({imagem:response.data})
     })
   }
+
 
   render(){   
     console.log(this.state.rocketList)
@@ -45,6 +48,7 @@ class App extends React.Component {
       <select onChange={this.onChangeSelect}>
         {optionList}
       </select>
+      <img src ={this.state.imagem[0]}/>
 
     </div>
   );
