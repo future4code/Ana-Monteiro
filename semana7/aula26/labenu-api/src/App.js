@@ -23,7 +23,7 @@ class App extends React.Component {
 
   onChangeSelect = (event) => {
     console.log("selecionou algo", event.target.value)
-    const apiUrl1 =`https://api.spacexdata.com/v3/rockets/{{rocket_id}}`
+    const apiUrl1 ="https://api.spacexdata.com/v3/rockets/{{rocket_id}}"
     axios.get(apiUrl1).then((response)=> {
       console.log("hauhsuhau")
     })
@@ -34,8 +34,8 @@ class App extends React.Component {
 
    const optionList= this.state.rocketList.map((rocket) =>{
    return <option key={rocket.rocket_name}>
-      {rocket.rocket_name}
-
+            {rocket.rocket_name}
+          
    </option>
    })
 
