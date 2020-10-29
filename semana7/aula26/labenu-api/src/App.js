@@ -17,8 +17,15 @@ class App extends React.Component {
   fetchRockets = () =>{
     const apiUrl ="https://api.spacexdata.com/v3/rockets"
     axios.get(apiUrl).then((response)=> {
-      console.log("OI QUERIDO, TE AMO", response)
       this.setState({rocketList: response.data})
+    })
+  }
+
+  onChangeSelect = (event) => {
+    console.log("selecionou algo", event.target.value)
+    const apiUrl1 =`https://api.spacexdata.com/v3/rockets/{{rocket_id}}`
+    axios.get(apiUrl1).then((response)=> {
+      console.log("hauhsuhau")
     })
   }
 
@@ -26,16 +33,19 @@ class App extends React.Component {
     console.log(this.state.rocketList)
 
    const optionList= this.state.rocketList.map((rocket) =>{
-   return <option>{rocket.rocket_name}</option>
+   return <option key={rocket.rocket_name}>
+      {rocket.rocket_name}
 
+   </option>
    })
+
+   console.log(optionList)
   return (
     <div>
-      <select>
-        <option>BANANA</option>
-        <option>CAQUI</option>
-        <option>MELANCIA</option>
+      <select onChange={this.onChangeSelect}>
+        {optionList}
       </select>
+
     </div>
   );
 }
