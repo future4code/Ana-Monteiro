@@ -7,7 +7,8 @@ const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 0.7em;
+  padding-left: 0.3em;
+  padding-right: 1em;
   background-color: #A6370F;
   position: -webkit-sticky;
 
@@ -33,19 +34,20 @@ const MainDiv = styled.div`
 
 const RocketImg  = styled.div`
 padding: 3em;
+margin-right: 11px;
+padding-left: 17em;
 
 img {
   height: 35vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 11px;
-  padding-left: 13em;
 }
 `
 const RocketDesc = styled.div`
-padding: 1.5em;
-margin: 2px;
+padding-right: 6em;
+padding-top: 1em;
+margin: 3px;
 display: flex;
 justify-content: flex-start;
 flex-direction: row;
