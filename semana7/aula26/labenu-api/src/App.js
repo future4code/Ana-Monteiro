@@ -3,12 +3,61 @@ import React from "react";
 import axios from "axios";
 import styled from "styled-components";
 
+const MainDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0.7em;
+  background-color: #A6370F;
+  position: -webkit-sticky;
+
+  h1{
+    font-size: 40px;
+    color: #260101;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    border: thick double #730D1F;
+  }
+
+  select{
+    font-size: 20px;
+    padding: 1em;
+    margin-right: 1em;
+    color: #731022;
+    border: 3mm ridge rgba(150, 100, 89);
+  }
+
+`
+
+const RocketImg  = styled.div`
+padding: 3em;
+
+img {
+  height: 35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 11px;
+  padding-left: 13em;
+}
+`
+const RocketDesc = styled.div`
+padding: 1.5em;
+margin: 2px;
+display: flex;
+justify-content: flex-start;
+flex-direction: row;
+font-size: 20px;
+`
+
 class App extends React.Component {
 
   state = {
     rocketList: [],
-    selectedRocketUrl: "",
-    imagem: []
+    selectedRocketImg: "",
+    selectRocketDesc: ""
 
   }
   componentDidMount(){
@@ -16,18 +65,22 @@ class App extends React.Component {
   }
 
   fetchRockets = () =>{
-    const apiUrl ="https://api.spacexdata.com/v3/rockets"
+    const apiUrl ="https://api.spacexdata.com/v3/rockets?limit=200"
     axios.get(apiUrl).then((response)=> {
       this.setState({rocketList: response.data})
     })
   }
 
-  onChangeSelect = (event) => {
-    console.log("selecionou algo", event.target.value)
-    const apiUrl1 =`https://api.spacexdata.com/v3/rockets/${{rocket_id}}`
-    axios.get(apiUrl1).then((response)=> {
-      console.log("hauhsuhau")
-      this.setState({imagem:response.data})
+  onChangeSelect = (e) => {
+    console.log("selecionou algo", e.target.value)
+    const apiUrl2 =`https://api.spacexdata.com/v3/rockets/${e.target.value}`;
+    axios.get(apiUrl2).then((response)=> {
+      this.setState(
+        {selectedRocketImg: response.data.flickr_images[1]}
+        )
+      this.setState(
+        {selectedRocketDesc:response.data.description}
+        )
     })
   }
 
@@ -36,7 +89,7 @@ class App extends React.Component {
     console.log(this.state.rocketList)
 
    const optionList= this.state.rocketList.map((rocket) =>{
-   return <option key={rocket.rocket_name}>
+   return <option value={rocket.rocket_id}>
             {rocket.rocket_name}
           
    </option>
@@ -44,13 +97,18 @@ class App extends React.Component {
 
    console.log(optionList)
   return (
-    <div>
+    <MainDiv>
+      <h1>Space X - Rockets</h1>
       <select onChange={this.onChangeSelect}>
         {optionList}
       </select>
-      <img src ={this.state.imagem[0]}/>
+      <RocketImg>
+        <img src ={this.state.selectedRocketImg} alt={this.state.selectedRocketImg}/>
+        <RocketDesc>{this.state.selectedRocketDesc}</RocketDesc>
+      </RocketImg>
+      
 
-    </div>
+    </MainDiv>
   );
 }
 }
