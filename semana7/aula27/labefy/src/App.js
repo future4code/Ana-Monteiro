@@ -8,17 +8,12 @@ class App extends React.Component {
 
   state ={
     formUser: true,
-    formPlay: true
   }
 
   changePageUser = () =>{
     this.setState({formUser: !this.state.formUser})
     }
   
-  changeWatchPlaylist = () =>{
-    this.setState({formPlay: !this.state.formPlay})
-  }
-
 
   render(){
     const currentPage = this.state.formUser? <FormUser/> : <WatchPlaylist/>;

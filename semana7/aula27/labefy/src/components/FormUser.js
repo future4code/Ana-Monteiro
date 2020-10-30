@@ -7,7 +7,7 @@ class FormUser extends React.Component {
 
     state = {
         playlists: [],
-        playlistValue: ""
+        playlistsValue: ""
     }
     
     componentDidMount = () => {
@@ -32,16 +32,45 @@ class FormUser extends React.Component {
         });
     };
 
+    createPlaylists = () => {
+        const body = {
+            name: this.state.playlistValue
+        };
 
+        axios.post(
+            "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+            body,
+            {
+                headers: {
+                    Authorization: "anapatricia-monteiro-dumont"
+                }
+            }
+        )
+        .then((response) => {
+            this.setState({playlistsValue: ""})
+            this.catchPlaylists();
+            console.log("legal vc criou praylista");
+        })
+        .catch((error)=>{
+            console.log(error.message);
+        })
+    }
 
+    onChangePlaylistValue = (event) => {
+        this.setState({playlistValue: event.target.value})
+    }
 
   render(){
 
   return (
     <div>
         <div>
-        <input />
-        <button>Criar Playlist</button>
+        <input
+        placeholder="Escrever nome da sua Playlist"
+        value={this.state.playlistValue}
+        onChange={this.onChangePlaylistValue}
+        />
+        <button onClick={this.createPlaylists}>Criar Playlist</button>
       </div>
     </div>
   );
