@@ -70,13 +70,6 @@ import App from "../App";
                 .catch((error)=>{
                     console.log("Não foi possível deletar!")
                 })
-
-                {this.state.playlists.map(playlist=> {
-                    if(id === playlist.id){
-                        console.log(playlist.name)
-                    }
-                })}
-
             }
 
            
