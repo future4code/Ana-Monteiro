@@ -96,7 +96,6 @@ import App from "../App";
             );
         });
 
-
         const renderedPlaylists = this.state.playlists.map((playlist) => {
                 return (<p key={playlist.id}>
                     {playlist.name}
