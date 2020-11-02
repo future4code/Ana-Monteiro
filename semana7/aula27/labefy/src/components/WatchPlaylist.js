@@ -12,6 +12,8 @@ font-size: 20px;
 
         state = {
             playlists: [],
+            playlistsValue: "",
+            watchMusic: true,
             playlistsTrack: [],
             playlistsValueTrackName: "",
             playlistsValueTrackArtist: "",
@@ -19,7 +21,7 @@ font-size: 20px;
             createTrack: true,
             selPlaylistId: ""
         }
-        
+
         componentDidMount = () => {
             this.catchPlaylists();
         }
@@ -28,24 +30,20 @@ font-size: 20px;
             this.catchPlaylistsTrack();
         }
 
-    
+        
         catchPlaylists = () => {
             axios.get(
-                "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
-                {
-                    headers: {
-                        Authorization: "anapatricia-monteiro-dumont"
-                    },
-                }
-            )
-            .then((response) => {
-                this.setState({playlists: response.data.result.list})
-                console.log("TA INU O CACTH")
-            })
-            .catch((err)=> {
-                console.log(err.message);
-            });
-        };
+                    }
+                    this.setState({playlists: response.data.result.tracks})
+                    console.log("peguei o id da musica")
+                    this.setState({playlistsTrack: response.data.result.tracks})
+
+                })
+                .catch((error)=>{
+                    console.log("Não foi possível deletar!")
+                })
+            }
+
 
 
         deletePlaylist = (id) => {
@@ -74,8 +72,7 @@ font-size: 20px;
                     }
                 )
                 .then((response) => {
-                    console.log("peguei o id da musica")
-                    this.setState({playlistsTrack: response.data.result.tracks})
+                    this.setState({playlists: response.data.result.tracks})
 
                 })
                 .catch((error)=>{
@@ -83,65 +80,33 @@ font-size: 20px;
                 })
             }
 
-          createPlaylistsTrack = (id) => {
-              const body ={
-                  "name": this.state.playlistsValueTrackName,
-                  "artist": this.state.playlistsValueTrackArtist,
-                   "url": this.state.playlistsValueTrackUrl
-              }
-              axios.post(
-                  `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.state.selPlaylistId}/tracks`,
-                  body,
-                  {
-                  headers:{
-                      Authorization: "anapatricia-monteiro-dumont"
-                  }
-                }
-              )
-              .then((response) => {
-                this.setState({playlistsValueTrackName: "", playlistsValueTrackArtist:"", playlistsValueTrackUrl:""})
-                this.catchPlaylistsTrack(this.state.selPlaylistId);
-                console.log("FUNFOU CRIAR MUSICA NA PRAYLISTA")
-              })
+        wannaWatchMusic = () =>{
+            this.setState({watchMusic: !this.state.watchMusic})
             }
-          
-        changeCreateTrack = () =>{
-            this.setState({createTrack: !this.state.createTrack})
-        }
-
-      render(){
-        const currentNewTrack = this.state.createTrack? <WatchPlaylistTrack/> : <App/>;
-
-        const renderizaPlaylist = this.state.playlists.map((playlist)=> {
-            return <p key={playlist.id}>
-              <button onClick={() => {this.catchPlaylistsTrack(playlist.id)}}>
-                  Ver Músicas da Playlist abaixo
-              </button>
-              <div>{playlist.name}</div>
-              <button  onClick={() => {this.deletePlaylist(playlist.id)}}>
-                        Excluir essa Playlist acima
-              </button>
-              </p>
-              })
-
-        const renderizaTrack = this.state.playlistsTrack.map((playlistTrack)=> {
-            return <p key={playlistTrack.id} value={playlistTrack.id}>
-              <div>{playlistTrack.name}</div>
-              <div>{playlistTrack.artist}</div>
-              <audio src={"http://spoti4.future4.com.br/1.mp3"} controls></audio>
-              <button onClick={this.createPlaylistsTrack}  key={playlistTrack.id} value={playlistTrack.id}>Criar Músicas</button>
-              </p>
-              })
-
-              return (
-                <MainDiv>{renderizaPlaylist}
-                    {renderizaTrack}
-                    {currentNewTrack}
-
-                </MainDiv>
-              
-            )
-            }
-        }
+        
     
+      render(){
+
+      return (
+          this.state.playlists.map((playlist)=> {
+              return (<MainDiv key={playlist.id}>
+                <button onClick={() => {this.catchPlaylistsTrack(playlist.id)}}>
+                    +
+                </button>
+                <div>{playlist.name}</div>
+                <div>{playlist.artist}
+                <audio src={playlist.url} value={playlist.url} controls>{playlist.url}</audio>
+                </div>
+                <button  onClick={() => {this.deletePlaylist(playlist.id)}}>
+                        X
+                </button>
+              
+            </MainDiv>
+            );
+            
+          })
+      );
+    }
+    }
+
 export default WatchPlaylist;
