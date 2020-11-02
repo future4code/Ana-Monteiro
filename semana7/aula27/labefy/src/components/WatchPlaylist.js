@@ -4,18 +4,28 @@ import axios from "axios";
 import WatchPlaylistTrack from "./WatchPlaylistTrack";
 import App from "../App";
 
+const MainDiv = styled.div`
+font-size: 20px;
+`
 
     class WatchPlaylist extends React.Component {
 
         state = {
             playlists: [],
-            playlistsValue: "",
-            watchMusic: true,
             playlistsTrack: [],
+            playlistsValueTrackName: "",
+            playlistsValueTrackArtist: "",
+            playlistsValueTrackUrl: "",
+            createTrack: true,
+            selPlaylistId: ""
         }
         
         componentDidMount = () => {
             this.catchPlaylists();
+        }
+
+        componentDidUpdate = ()=>{
+            this.catchPlaylistsTrack();
         }
 
     
@@ -64,7 +74,8 @@ import App from "../App";
                     }
                 )
                 .then((response) => {
-                    this.setState({playlists: response.data.result.tracks})
+                    console.log("peguei o id da musica")
+                    this.setState({playlistsTrack: response.data.result.tracks})
 
                 })
                 .catch((error)=>{
@@ -72,41 +83,65 @@ import App from "../App";
                 })
             }
 
-           
-    
-        wannaWatchMusic = () =>{
-            this.setState({watchMusic: !this.state.watchMusic})
+          createPlaylistsTrack = (id) => {
+              const body ={
+                  "name": this.state.playlistsValueTrackName,
+                  "artist": this.state.playlistsValueTrackArtist,
+                   "url": this.state.playlistsValueTrackUrl
+              }
+              axios.post(
+                  `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${this.state.selPlaylistId}/tracks`,
+                  body,
+                  {
+                  headers:{
+                      Authorization: "anapatricia-monteiro-dumont"
+                  }
+                }
+              )
+              .then((response) => {
+                this.setState({playlistsValueTrackName: "", playlistsValueTrackArtist:"", playlistsValueTrackUrl:""})
+                this.catchPlaylistsTrack(this.state.selPlaylistId);
+                console.log("FUNFOU CRIAR MUSICA NA PRAYLISTA")
+              })
             }
-    
+          
+        changeCreateTrack = () =>{
+            this.setState({createTrack: !this.state.createTrack})
+        }
+
       render(){
+        const currentNewTrack = this.state.createTrack? <WatchPlaylistTrack/> : <App/>;
 
-        const renderedPlaylistsTracks = this.state.playlists.map((playlist)=>{
-            return (<p key={playlist.id}>
-                <button onClick={() => {this.catchPlaylistsTrack(playlist.id)}}>
-                    +
-                </button>
-            </p>
-            );
-        });
+        const renderizaPlaylist = this.state.playlists.map((playlist)=> {
+            return <p key={playlist.id}>
+              <button onClick={() => {this.catchPlaylistsTrack(playlist.id)}}>
+                  Ver Músicas da Playlist abaixo
+              </button>
+              <div>{playlist.name}</div>
+              <button  onClick={() => {this.deletePlaylist(playlist.id)}}>
+                        Excluir essa Playlist acima
+              </button>
+              </p>
+              })
 
-        const renderedPlaylists = this.state.playlists.map((playlist) => {
-                return (<p key={playlist.id}>
-                    {playlist.name}
-                    <button  onClick={() => {this.deletePlaylist(playlist.id)}}>
-                        X
-                    </button>
-                    </p>   
-              );   
-        });
+        const renderizaTrack = this.state.playlistsTrack.map((playlistTrack)=> {
+            return <p key={playlistTrack.id} value={playlistTrack.id}>
+              <div>{playlistTrack.name}</div>
+              <div>{playlistTrack.artist}</div>
+              <audio src={"http://spoti4.future4.com.br/1.mp3"} controls></audio>
+              <button onClick={this.createPlaylistsTrack}  key={playlistTrack.id} value={playlistTrack.id}>Criar Músicas</button>
+              </p>
+              })
 
-      return (
-        <div>
-           
-           <div>{renderedPlaylists}</div>
-            <div>{renderedPlaylistsTracks}</div>
-        </div>
-      );
-    }
-    }
+              return (
+                <MainDiv>{renderizaPlaylist}
+                    {renderizaTrack}
+                    {currentNewTrack}
 
+                </MainDiv>
+              
+            )
+            }
+        }
+    
 export default WatchPlaylist;
