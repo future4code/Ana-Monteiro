@@ -29,7 +29,7 @@ class AddPlaylistTrack extends React.Component {
   };
 
   handleToggleEdition = () => {
-    this.setState({ isEditing: !isEditing });
+    this.setState({ isEditing: true });
   };
 
   getPlaylistDetails = (id) => {

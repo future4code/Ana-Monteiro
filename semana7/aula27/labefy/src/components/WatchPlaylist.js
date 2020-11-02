@@ -17,8 +17,8 @@ class WatchPlaylist extends React.Component {
     watchMusic: true,
     playlistsTrack: [],
     createTrack: true,
-    selPlaylistId: "",
     playlistDetail: [],
+    selPlaylistId: "",
   };
 
   componentDidMount = () => {
@@ -98,7 +98,6 @@ class WatchPlaylist extends React.Component {
         />
 
         {renderizaButton}
-        {playlistEdition}
       </MainDiv>
     );
   }
