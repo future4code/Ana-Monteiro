@@ -1,5 +1,18 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
+
+const MotherDiv = styled.div`
+  text-align: center;
+  padding: 6em;
+  background-color: #d9886a;
+  margin: 0 auto;
+`;
+
+const Title = styled.div`
+  font-size: 25px;
+  color: #732d14;
+`;
 
 function PokeCard(props) {
   const [pokemon, setPokemon] = useState({});
@@ -31,14 +44,14 @@ function PokeCard(props) {
   };
 
   return (
-    <div>
-      <p>{pokemon.name}</p>
-      <p>{pokemon.weight} Kg</p>
-      {pokemon.types && <p>{pokemon.types[0].type.name}</p>}
+    <MotherDiv>
+      <Title>{pokemon.name}</Title>
+      <Title>{pokemon.weight} Kg</Title>
+      {pokemon.types && <Title>{pokemon.types[0].type.name}</Title>}
       {pokemon.sprites && (
         <img src={pokemon.sprites.front_default} alt={pokemon.name} />
       )}
-    </div>
+    </MotherDiv>
   );
 }
 

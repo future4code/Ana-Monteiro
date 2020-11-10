@@ -1,6 +1,20 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PokeCard from "./components/PokeCard/PokeCard";
+import styled from "styled-components";
+
+const MotherDiv = styled.div`
+  text-align: center;
+  padding: 6em;
+  background-color: #d9886a;
+  margin: 10em;
+`;
+
+const Title = styled.div`
+  font-size: 25px;
+  color: #732d14;
+  margin: 1em;
+`;
 
 function App() {
   const [pokeList, setPokeList] = useState([]);
@@ -26,9 +40,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <MotherDiv className="App">
       {/* evento onChange chama função toda vez que o usuário 
         escolhe um novo pokemon no dropdown */}
+      <Title>Pokemóns ATIVAR</Title>
       <select onChange={changePokeName}>
         <option value={""}>Nenhum</option>
 
@@ -44,7 +59,7 @@ function App() {
       {/* expressão booleana que renderiza o componente PokeCard,
         caso o valor de pokeName, no estado, seja true */}
       {pokeName && <PokeCard pokemon={pokeName} />}
-    </div>
+    </MotherDiv>
   );
 }
 
