@@ -5,11 +5,21 @@ export const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-height: 100vh;
+  height: 100vh;
 `;
 
 export const ImageMatch = styled.img`
   border-radius: 30em;
   height: 6em;
+  width: 6em;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradiente(
+    to-right,
+    rgba(111, 43, 140, 0.1),
+    rgba(115, 80, 128, 0.7)
+  );
 `;
 
 export const ImageLogo = styled.img`
@@ -26,11 +36,16 @@ export const OrganizeImages = styled.div`
 export const OrganizeImages2 = styled.div`
   display: flex;
   flex-direction: column;
+  padding-left: 4em;
+  overflow-y: scroll;
+  height: 60vh;
+  width: 20vw;
 `;
 
 export const OrganizeImages3 = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-right: 2em;
 `;
 
@@ -43,7 +58,7 @@ export const BackImage = styled.img`
 export const ImageDel = styled.img`
   height: 5em;
   padding-top: 40em;
-  padding-left: 3em;
+  padding-left: 8em;
   position: absolute;
 `;
 

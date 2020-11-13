@@ -5,8 +5,8 @@ export const MainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
-  height: 100%;
+  max-height: 100vw;
+  height: 100vh;
 `;
 
 export const Image = styled.div`
@@ -29,10 +29,11 @@ export const MiddleDiv = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-  margin: 28px;
+  margin: 15px;
   border: solid;
-  width: 31em;
+  width: 30em;
   height: 57em;
+  overflow: visible;
 `;
 
 export const ImagePhoto = styled.img`
