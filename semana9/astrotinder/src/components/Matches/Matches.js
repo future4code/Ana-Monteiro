@@ -66,10 +66,8 @@ function Matches(props) {
           <ImageLogo src={baixados} />
           <BackImage src={back} onClick={props.onClickMatches} />
         </OrganizeImages>
-        <OrganizeImages2>
-          {mapList}
-          <ImageDel src={del} onClick={deleteMatches} />
-        </OrganizeImages2>
+        <OrganizeImages2>{mapList}</OrganizeImages2>
+        <ImageDel src={del} onClick={deleteMatches} />
       </MiddleDiv>
     </MainDiv>
   );

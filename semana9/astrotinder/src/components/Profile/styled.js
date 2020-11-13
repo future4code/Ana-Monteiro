@@ -29,11 +29,24 @@ export const MiddleDiv = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-  margin: 15px;
   border: solid;
+  border-width: 5px;
+  border-color: #4ba695;
   width: 30em;
-  height: 57em;
-  overflow: visible;
+  height: 58em;
+  overflow: auto;
+`;
+
+export const FirstDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const SecondDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const ImagePhoto = styled.img`
@@ -41,6 +54,8 @@ export const ImagePhoto = styled.img`
   height: 16em;
   margin: 25px;
   border: solid;
+  border-width: 5px;
+  border-color: #4ba695;
 `;
 
 export const ImageLogo = styled.img`

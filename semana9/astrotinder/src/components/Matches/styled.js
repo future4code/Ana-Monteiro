@@ -15,11 +15,6 @@ export const ImageMatch = styled.img`
   width: 6em;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradiente(
-    to-right,
-    rgba(111, 43, 140, 0.1),
-    rgba(115, 80, 128, 0.7)
-  );
 `;
 
 export const ImageLogo = styled.img`
@@ -47,6 +42,11 @@ export const OrganizeImages3 = styled.div`
   flex-direction: column;
   align-items: center;
   margin-right: 2em;
+  background-image: linear-gradiente(
+    to-right,
+    rgba(111, 43, 140, 0.1),
+    rgba(115, 80, 128, 0.7)
+  );
 `;
 
 export const BackImage = styled.img`
@@ -57,9 +57,7 @@ export const BackImage = styled.img`
 
 export const ImageDel = styled.img`
   height: 5em;
-  padding-top: 40em;
-  padding-left: 8em;
-  position: absolute;
+  padding-bottom: 3em;
 `;
 
 export const MiddleDiv = styled.div`
@@ -69,6 +67,8 @@ export const MiddleDiv = styled.div`
   background-color: white;
   margin: 15px;
   border: solid;
+  border-width: 5px;
+  border-color: #4ba695;
   width: 30em;
   height: 53em;
 `;

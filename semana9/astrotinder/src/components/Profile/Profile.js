@@ -9,17 +9,20 @@ import {
   Text,
   ImageLogo,
   ImageIcon2,
+  SecondDiv,
+  FirstDiv,
 } from "./styled";
 
 import core from "../img/core.png";
 import recusar from "../img/recusar.png";
 import baixados from "../img/baixados.png";
 import crushes from "../img/crushes.svg";
+import seta from "../img/seta.png";
 
 const urlBase =
   "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/anapatricia/";
 
-function Profile(props) {
+export default function Profile(props) {
   const [profile, setProfile] = useState([]);
 
   const [choiceProfile, setChoiceProfile] = useState(false);
@@ -73,22 +76,36 @@ function Profile(props) {
     setRenderState(!renderState);
   };
 
-  return (
-    <MainDiv>
-      <MiddleDiv>
-        <ImageLogo src={baixados} />
-        <ImageIcon2 src={crushes} onClick={props.onClickProfile} />
-        <Text>{profile.name}</Text>
-        <Text>{profile.age}</Text>
-        <ImagePhoto src={profile.photo} />
-        <Text>{profile.bio}</Text>
-        <Image>
-          <ImageIcon onClick={onClickLike} src={core} />
-          <ImageIcon onClick={onClickDislike} src={recusar} />
-        </Image>
-      </MiddleDiv>
-    </MainDiv>
-  );
+  if (profile) {
+    return (
+      <MainDiv>
+        <MiddleDiv>
+          <FirstDiv>
+            <ImageLogo src={baixados} />
+            <ImageIcon2 src={crushes} onClick={props.onClickProfile} />
+          </FirstDiv>
+          <SecondDiv>
+            <Text>{profile.name}</Text>
+            <Text>{profile.age}</Text>
+            <ImagePhoto src={profile.photo} />
+            <Text>{profile.bio}</Text>
+          </SecondDiv>
+          <Image>
+            <ImageIcon onClick={onClickLike} src={core} />
+            <ImageIcon onClick={onClickDislike} src={recusar} />
+          </Image>
+        </MiddleDiv>
+      </MainDiv>
+    );
+  } else {
+    return (
+      <MainDiv>
+        <MiddleDiv>
+          <ImageLogo src={baixados} />
+          <Text>Acabaram os Crushes! =(</Text>
+          <ImageIcon src={seta} onClick={props.onClickProfile} />
+        </MiddleDiv>
+      </MainDiv>
+    );
+  }
 }
-
-export default Profile;
