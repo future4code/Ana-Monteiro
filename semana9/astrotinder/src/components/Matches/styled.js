@@ -71,6 +71,14 @@ export const MiddleDiv = styled.div`
   border-color: #4ba695;
   width: 30em;
   height: 53em;
+
+  @media screen (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: device-width;
+  }
 `;
 
 export const Text = styled.p`

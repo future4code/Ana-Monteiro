@@ -7,6 +7,11 @@ export const MainDiv = styled.div`
   align-items: center;
   max-height: 100vw;
   height: 100vh;
+
+
+  @media screen and(max-width: 600px) {
+    max-height: 100px;
+    max-width: 100px;
 `;
 
 export const Image = styled.div`
@@ -35,6 +40,15 @@ export const MiddleDiv = styled.div`
   width: 30em;
   height: 58em;
   overflow: auto;
+
+  @media screen (max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: device-width;
+    column-width: 100em;
+  }
 `;
 
 export const FirstDiv = styled.div`
