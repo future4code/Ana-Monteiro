@@ -6,7 +6,7 @@ export const MainDiv = styled.div`
   flex-direction: column;
   align-items: center;
   max-height: 100vh;
-  height: 100vh;
+  height: 110vh;
 `;
 
 export const ImageMatch = styled.img`
