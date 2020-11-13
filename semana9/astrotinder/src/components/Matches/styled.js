@@ -42,9 +42,9 @@ export const BackImage = styled.img`
 
 export const ImageDel = styled.img`
   height: 5em;
-  padding-top: 35em;
-  padding-left: 3em;
-  position: fixed;
+  padding-top: 38em;
+  padding-left: 1.7em;
+  position: relative;
 `;
 
 export const MiddleDiv = styled.div`
