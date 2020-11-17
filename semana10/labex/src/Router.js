@@ -14,6 +14,8 @@ import CreateTripPage from "./pages/CreateTrips/CreateTripPage.js";
 
 import ApplicationForm from "./pages/ApplicationForm/ApplicationForm.js";
 
+import Error from "./pages/Error/Error.js";
+
 function Router() {
   return (
     <BrowserRouter>
@@ -37,7 +39,7 @@ function Router() {
           <ApplicationForm />
         </Route>
         <Route>
-          <div>Ops, erro 404</div>
+          <Error />
         </Route>
       </Switch>
     </BrowserRouter>
