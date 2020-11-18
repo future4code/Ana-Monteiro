@@ -4,11 +4,11 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import HomePage from "./pages/Main/HomePage.js";
 
-import LoginAdmPage from "./pages/LoginAdm/LoginAdmPage.js";
+import { LoginAdmPage } from "./pages/LoginAdm/LoginAdmPage.js";
 
 import ListTripsPage from "./pages/ListTrips/ListTripsPage.js";
 
-import DetailsTrips from "./pages/DetailsTrips//TripDetailsPage.js";
+import DetailsTrips from "./pages/DetailsTrips/TripDetailsPage.js";
 
 import CreateTripPage from "./pages/CreateTrips/CreateTripPage.js";
 
