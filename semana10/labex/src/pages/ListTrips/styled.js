@@ -5,26 +5,26 @@ export const MainDiv = styled.div`
   border: solid black;
   margin: 0 auto;
   justify-content: space-between;
-  width: 100vw;
-  height: 100vh;
+  width: 200vh;
+  height: 100vw;
   @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
   font-family: "Dancing Script", cursive;
   background-color: #9c7ba6;
-`;
-
-export const MiddleDiv = styled.div`
   background-image: url(${ocean});
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  overflow: auto;
+  overflow-y: scroll;
+`;
+
+export const MiddleDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-top: 5em;
   padding-left: 40em;
   padding-right: 40em;
-  overflow: auto;
-  overflow-y: scroll;
 `;
 
 export const Text = styled.div`

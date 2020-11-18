@@ -11,8 +11,9 @@ export const MainDiv = styled.div`
   justify-content: space-between;
   @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
   font-family: "Dancing Script", cursive;
-  width: 150vh;
-  height: 48vw;
+  width: 200vh;
+  height: 50vw;
+  overflow: auto;
 `;
 
 export const MiddleDiv = styled.div`
