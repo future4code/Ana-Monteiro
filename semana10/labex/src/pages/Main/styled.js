@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import montain from "../img/montain.jpg";
+import montain from "../img/main.jpg";
 
 export const MainDiv = styled.div`
   background-image: url(${montain});
@@ -7,22 +7,26 @@ export const MainDiv = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   border: solid black;
-  margin: 0;
+  margin: 0 auto;
   justify-content: space-between;
   width: 100vw;
   height: 100vh;
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+  font-family: "Dancing Script", cursive;
 `;
 
 export const MiddleDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding-top: 4em;
 `;
 
 export const Middle2Div = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-right: 6em;
 `;
 
 export const Middle3Div = styled.div`
@@ -31,10 +35,23 @@ export const Middle3Div = styled.div`
 `;
 
 export const TextTitle = styled.div`
-  color: white;
-  font-size: 60px;
+  color: rgb(40, 33, 64, 0.7);
+  font-size: 25em;
+  text-align: center;
 `;
 
 export const Text = styled.div`
-  color: white;
+  color: rgb(40, 33, 64, 0.7);
+  text-align: center;
+  font-size: 3em;
+`;
+
+export const TextTitle2 = styled.div`
+  color: rgb(40, 33, 64, 1);
+  text-align: center;
+  font-size: 3em;
+`;
+
+export const Image = styled.img`
+  height: 10em;
 `;

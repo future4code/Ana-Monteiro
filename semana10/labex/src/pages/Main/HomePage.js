@@ -9,6 +9,8 @@ import {
   Middle3Div,
   TextTitle,
   Text,
+  TextTitle2,
+  Image,
 } from "./styled";
 
 const HomePage = () => {
@@ -28,12 +30,12 @@ const HomePage = () => {
       <Text>Seu futuro começa Aqui!Bon Voyage = D</Text>
       <MiddleDiv>
         <Middle2Div>
-          <h3>Login Administrador</h3>
-          <img src={globo} onClick={goToAdmPages} />
+          <TextTitle2>Administrador</TextTitle2>
+          <Image src={globo} onClick={goToAdmPages} />
         </Middle2Div>
         <Middle3Div>
-          <h3>Login Usuário</h3>
-          <img src={form} onClick={goToApplicationForm} />
+          <TextTitle2>Usuário</TextTitle2>
+          <Image src={form} onClick={goToApplicationForm} />
         </Middle3Div>
       </MiddleDiv>
     </MainDiv>
