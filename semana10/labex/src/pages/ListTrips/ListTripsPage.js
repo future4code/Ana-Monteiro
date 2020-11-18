@@ -10,6 +10,7 @@ import {
 import { useHistory } from "react-router-dom";
 import back from "../img/Plane2.png";
 import { useGetTrips } from "../../hooks/useGetTrips";
+import mais from "../img/mais.svg";
 
 const ListTripsPage = () => {
   const history = useHistory();
@@ -24,6 +25,10 @@ const ListTripsPage = () => {
   const getTrip = useGetTrips(`${baseUrl}trips`, undefined);
   console.log("getTrip", getTrip);
 
+  const getTripDetails = (id) => {
+    history.push(`/detailstrips/${id}`);
+  };
+
   return (
     <MainDiv>
       <MiddleDiv1>
@@ -34,10 +39,9 @@ const ListTripsPage = () => {
         getTrip.map((trip) => {
           return (
             <MiddleDiv key={trip.id}>
-              <Text>Nome da viagem : {trip.name}</Text>
-              <Text>Descrição da Viagem : {trip.description}</Text>
-              <Text>Duração em dias : {trip.durationInDays}</Text>
-              <Text>Data : {trip.date}</Text>
+              <Text onClick={() => getTripDetails(trip.id)}>
+                Nome da viagem : {trip.name}
+              </Text>
             </MiddleDiv>
           );
         })}

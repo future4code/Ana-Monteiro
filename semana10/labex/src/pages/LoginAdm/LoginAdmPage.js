@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { MainDiv } from "./styled";
 import back from "../img/Plane2.png";
 import Guide from "../img/Guide.png";
 import Ticket from "../img/Ticket.png";
-import axios from "axios";
 
 export function LoginAdmPage() {
   const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
+
   const history = useHistory();
 
   const handleEmail = (event) => {
@@ -23,7 +25,7 @@ export function LoginAdmPage() {
     const token = localStorage.getItem("token");
 
     if (token) {
-      history.push("/detailstrips");
+      history.push("/listtripspage");
     }
   }, [history]);
 
@@ -32,7 +34,6 @@ export function LoginAdmPage() {
       email: email,
       password: password,
     };
-
     axios
       .post(
         "https://us-central1-labenu-apis.cloudfunctions.net/labeX/anapatriciamonteiro-dumont/login",
@@ -40,12 +41,13 @@ export function LoginAdmPage() {
       )
       .then((res) => {
         localStorage.setItem("token", res.data.token);
-        history.push("/detailstrips");
+        history.push("/listtripspage");
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
   const goBack = () => {
     history.goBack();
   };
@@ -56,10 +58,14 @@ export function LoginAdmPage() {
 
   return (
     <MainDiv>
-      <h1>Adm Page</h1>;<p>Email:</p>
-      <input value={email} onChange={handleEmail} />
-      <p>Senha:</p>
-      <input value={password} onChange={handlePassword} />
+      <h1>Adm Page</h1>;
+      <input value={email} placeholder="Email" onChange={handleEmail} />
+      <input
+        value={password}
+        type="senha"
+        placeholder="Senha"
+        onChange={handlePassword}
+      />
       <img src={back} onClick={goBack} />
       <img src={Guide} onClick={login} />
       <img src={Ticket} onClick={goToCreateTripPage} />

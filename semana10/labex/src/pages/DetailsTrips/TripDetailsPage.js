@@ -19,9 +19,10 @@ const TripDetailsPage = () => {
   }, []);
 
   const getTripDetail = () => {
+    console.log(id);
     axios
       .get(
-        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/anapatricia-monteiro/trip/${id}`,
+        `https://us-central1-labenu-apis.cloudfunctions.net/labeX/anapatriciamonteiro-dumont/trip/${id}`,
         {
           headers: {
             auth: localStorage.getItem("token"),
@@ -31,6 +32,7 @@ const TripDetailsPage = () => {
       .then((res) => {
         setTrip(res.data.trip);
         console.log(res.data.trip);
+        console.log(trip);
       })
       .catch((err) => {
         console.log(err);
@@ -47,6 +49,8 @@ const TripDetailsPage = () => {
         <h1>Trip details</h1>
         <p>{trip.name}</p>
         <p>{trip.planet}</p>
+        <p>{trip.durationInDays}</p>
+        <p>{trip.date}</p>
         <img src={back} onClick={goBack} />
       </div>
     </MainDiv>
