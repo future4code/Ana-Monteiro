@@ -9,10 +9,10 @@ export const MainDiv = styled.div`
   border: solid black;
   margin: 0 auto;
   justify-content: space-between;
-  width: 100vw;
-  height: 100vh;
   @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
   font-family: "Dancing Script", cursive;
+  width: 150vh;
+  height: 48vw;
 `;
 
 export const MiddleDiv = styled.div`
@@ -54,4 +54,8 @@ export const TextTitle2 = styled.div`
 
 export const Image = styled.img`
   height: 10em;
+`;
+
+export const UpperDiv = styled.div`
+  background: #413473;
 `;

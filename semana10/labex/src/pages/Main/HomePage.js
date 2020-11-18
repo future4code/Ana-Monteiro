@@ -11,6 +11,7 @@ import {
   Text,
   TextTitle2,
   Image,
+  UpperDiv,
 } from "./styled";
 
 const HomePage = () => {
@@ -25,20 +26,22 @@ const HomePage = () => {
   };
 
   return (
-    <MainDiv>
-      <TextTitle>LabeX</TextTitle>;
-      <Text>Seu futuro começa Aqui!Bon Voyage = D</Text>
-      <MiddleDiv>
-        <Middle2Div>
-          <TextTitle2>Administrador</TextTitle2>
-          <Image src={globo} onClick={goToAdmPages} />
-        </Middle2Div>
-        <Middle3Div>
-          <TextTitle2>Usuário</TextTitle2>
-          <Image src={form} onClick={goToApplicationForm} />
-        </Middle3Div>
-      </MiddleDiv>
-    </MainDiv>
+    <UpperDiv>
+      <MainDiv>
+        <TextTitle>LabeX</TextTitle>;
+        <Text>Seu futuro começa Aqui!Bon Voyage = D</Text>
+        <MiddleDiv>
+          <Middle2Div>
+            <TextTitle2>Administrador</TextTitle2>
+            <Image src={globo} onClick={goToAdmPages} />
+          </Middle2Div>
+          <Middle3Div>
+            <TextTitle2>Usuário</TextTitle2>
+            <Image src={form} onClick={goToApplicationForm} />
+          </Middle3Div>
+        </MiddleDiv>
+      </MainDiv>
+    </UpperDiv>
   );
 };
 
