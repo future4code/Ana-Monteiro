@@ -10,7 +10,6 @@ import {
 import { useHistory } from "react-router-dom";
 import back from "../img/Plane2.png";
 import { useGetTrips } from "../../hooks/useGetTrips";
-import mais from "../img/mais.svg";
 
 const ListTripsPage = () => {
   const history = useHistory();
@@ -29,6 +28,11 @@ const ListTripsPage = () => {
     history.push(`/detailstrips/${id}`);
   };
 
+  const logOut = () => {
+    localStorage.removeItem("token");
+    history.push("/");
+  };
+
   return (
     <MainDiv>
       <MiddleDiv1>
@@ -42,6 +46,7 @@ const ListTripsPage = () => {
               <Text onClick={() => getTripDetails(trip.id)}>
                 Nome da viagem : {trip.name}
               </Text>
+              <button onClick={logOut}>Sair lista</button>
             </MiddleDiv>
           );
         })}

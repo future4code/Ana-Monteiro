@@ -53,12 +53,12 @@ export function LoginAdmPage() {
   };
 
   const goToCreateTripPage = () => {
-    history.push("/createtrippage");
+    history.push("/createtrippage/:id");
   };
 
   return (
     <MainDiv>
-      <h1>Adm Page</h1>;
+      <h1>Adm Page</h1>
       <input value={email} placeholder="Email" onChange={handleEmail} />
       <input
         value={password}

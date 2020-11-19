@@ -32,7 +32,7 @@ function Router() {
         <Route exact path="/detailstrips/:id">
           <DetailsTrips />
         </Route>
-        <Route exact path="/createtrippage">
+        <Route exact path="/createtrippage/:id">
           <CreateTripPage />
         </Route>
         <Route exact path="/applicationform">
