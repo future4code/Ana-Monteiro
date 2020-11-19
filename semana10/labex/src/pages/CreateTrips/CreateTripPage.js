@@ -38,8 +38,8 @@ export function CreateTripPage() {
       })
       .catch((error) => {
         console.log(error);
-      });
-  };
+      })
+  }
 
   return (
     <MainDiv>
