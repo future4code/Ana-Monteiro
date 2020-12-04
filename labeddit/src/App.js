@@ -6,7 +6,7 @@ import styled from "styled-components";
 import Login from "./Telas/Login/Login";
 
 const Container = styled.div`
-  padding-top: 64px;
+  padding-top: 68px;
 `;
 
 function App() {
