@@ -1,0 +1,24 @@
+{
+   "name": "package-template",
+   "version": "1.0.0",
+   "description": "Primeira aula de backend da Dumont",
+   "main": "index.js",
+   "scripts": {
+      "start": "node ./src/index.js",
+      "test": "echo 'Error: no test specified'",
+      "search-country-by-name":"clear && node ./src/searchCountryByName.js"
+   },
+   "keywords": [
+      "backend",
+      "node",
+      "package.json"
+   ],
+   "author": "Labenu",
+   "license": "ISC",
+   "dependencies": {
+      "chalk": "^4.1.0"
+   },
+   "devDependencies": {
+      "typescript": "^4.1.3"
+   }
+}
