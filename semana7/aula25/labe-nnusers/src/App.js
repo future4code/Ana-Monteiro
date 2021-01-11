@@ -11,9 +11,11 @@ const MudarBotao1 = styled.button`
     padding: 10px;
     background-color: pink;
     text-decoration: none;
-    align-self: center;
-    margin-left: 450px;
+`
 
+const Alterando = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
 
@@ -36,7 +38,7 @@ render() {
   return(
     <div>  
     {aparecerTela}
-    <MudarBotao1 onClick = {this.mudarPagina}>Mudar de Página </MudarBotao1>
+    <Alterando><MudarBotao1 onClick = {this.mudarPagina}>Mudar de Página </MudarBotao1></Alterando>
   </div>
   )
   }

@@ -18,9 +18,11 @@ const MudarBotao = styled.button`
     padding: 10px;
     background-color: pink;
     text-decoration: none;
-    align-self: center;
-    margin-left: 450px;
+`
 
+const Alterando2 = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
 export default class Cadastro extends React.Component{
@@ -102,7 +104,7 @@ export default class Cadastro extends React.Component{
                 onChange={this.onChangeEntradaEmail}
                 />
                 </TituloFormulario>
-                <MudarBotao onClick ={this.criarUsuario}>Cadastro</MudarBotao>
+                <Alterando2><MudarBotao onClick ={this.criarUsuario}>Cadastro</MudarBotao></Alterando2>
     
                 
                 
