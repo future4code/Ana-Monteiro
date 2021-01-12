@@ -66,7 +66,7 @@ e) Código de Erro: 1292. Valor da data incorreta: '1950' para coluna 'birth_dat
    "female"
    );
 
- f)
+f)
 
    INSERT INTO Actor (id, name, salary, birth_date, gender)
    VALUES(
@@ -85,3 +85,21 @@ e) Código de Erro: 1292. Valor da data incorreta: '1950' para coluna 'birth_dat
    "2000-05-10",
    "female"
    );
+
+
+3)
+
+a) SELECT id, name, salary, birth_date from Actor WHERE gender = "female";
+
+b) SELECT salary from Actor WHERE name = "Angelina Jolie";
+
+c) SELECT id, name, salary, birth_date from Actor WHERE gender = "invalid"; Ele não retorna nenhuma informação pois não tem gender inválido cadastrado
+
+d) SELECT id, name, salary from Actor WHERE salary <= 500000
+
+e) Código de erro: 1054. Coluna desconhecida 'nome' em 'lista de campo'. Não é nome, e sim name no código, por isso estava errado.
+
+   SELECT id, name from Actor WHERE id = "002";
+
+
+
