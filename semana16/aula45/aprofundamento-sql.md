@@ -125,12 +125,27 @@ d)  DELETE FROM Movie WHERE id = "001";
     Depois ele tenta atualizar a sinopse do filme e não consegue, porque o id 001 foi deletado:
 
     Ele dá a seguinte resposta :  
-    
+
     0 linhas afetadas Linhas combinadas: 0 Alterado: 0 Avisos: 0
 
     UPDATE Movie
     SET synopsis = "lala"
     WHERE id = "001"
+
+
+7)
+
+a) SELECT COUNT(*) FROM Movie WHERE rating > 7.5;
+
+b) SELECT AVG(rating) FROM Movie;
+
+c) SELECT COUNT(*) FROM Movie WHERE playing_limit_date >= "2020-01-12";
+
+d) SELECT COUNT(*) FROM Movie WHERE date_movie > "2020-01-12";
+
+e) SELECT MAX(rating) FROM Movie;
+
+f) SELECT MIN(rating) FROM Movie;
 
 
 
