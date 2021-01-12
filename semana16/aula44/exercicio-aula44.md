@@ -102,4 +102,21 @@ e) Código de erro: 1054. Coluna desconhecida 'nome' em 'lista de campo'. Não �
    SELECT id, name from Actor WHERE id = "002";
 
 
+4)
+
+a) SELECT * FROM Actor
+WHERE (name LIKE "A%" OR name LIKE "J%") AND salary > 300000
+
+Buscamos na nossa tabela, nomes que iniciem com a letra A ou J e salário maior que 300 mil
+Se fosse "%A" buscaríamos a última letra com a letra A
+
+b) SELECT * FROM Actor
+WHERE (name NOT LIKE "A%") AND salary > 350000;
+
+c) SELECT * FROM Actor
+WHERE name LIKE "%G%" OR name LIKE "%g%";
+
+d) SELECT * FROM Actor
+WHERE (name like "%a%" or name LIKE "%A%" or name LIKE "%G%" or name LIKE "%g%")
+AND salary BETWEEN 350000 AND 900000;
 
