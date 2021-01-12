@@ -176,3 +176,18 @@ b) SELECT name from Movie WHERE name = "Doce de Mãe";
 c) SELECT name, id, synopsis from Movie WHERE rating >= 7;
 
 
+7)
+
+a) SELECT name from Movie WHERE name LIKE "%Vida%";
+
+b) SELECT name from Movie WHERE name LIKE "%Elite%" or synopsis LIKE "%Elite%";
+
+c) SELECT name from Movie WHERE date_movie <= "2021-01-11";
+
+d) SELECT name from Movie
+   WHERE (name LIKE "%Flor%" or synopsis LIKE "%Elite%") AND (date_movie <= "2021-01-11") AND
+   (rating >= 7);
+
+
+
+
