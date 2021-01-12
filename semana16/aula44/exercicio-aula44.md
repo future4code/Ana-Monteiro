@@ -167,4 +167,12 @@ e) INSERT INTO Movie (id, name, synopsis, date_movie, rating)
    10
 );
 
+6)
+
+a) SELECT name, id, rating from Movie WHERE id ="003";
+
+b) SELECT name from Movie WHERE name = "Doce de Mãe";
+
+c) SELECT name, id, synopsis from Movie WHERE rating >= 7;
+
 
