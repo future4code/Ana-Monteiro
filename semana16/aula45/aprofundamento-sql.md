@@ -98,4 +98,40 @@ d) SELECT * FROM Actor ORDER BY salary DESC LIMIT 3;
 e)  SELECT AVG(salary), gender FROM Actor 
     GROUP BY gender;
 
+
+6)
+
+a) ALTER TABLE Movie ADD playing_limit_date DATE DEFAULT "2020-10-01";
+
+b) ALTER TABLE Movie CHANGE rating rating FLOAT;
+
+c)  UPDATE Movie
+    SET
+    playing_limit_date = "2020-03-12"
+    WHERE
+    name = "Tropa de Elite";
+
+    UPDATE Movie
+    SET
+    playing_limit_date = "2005/02/03"
+    WHERE
+    name = "Dona Flor e seus dois Maridos";
+
+
+d)  DELETE FROM Movie WHERE id = "001";
+
+    ( aqui em cima ele deletou o filme com o id = "001" )
+
+    Depois ele tenta atualizar a sinopse do filme e não consegue, porque o id 001 foi deletado:
+
+    Ele dá a seguinte resposta :  
     
+    0 linhas afetadas Linhas combinadas: 0 Alterado: 0 Avisos: 0
+
+    UPDATE Movie
+    SET synopsis = "lala"
+    WHERE id = "001"
+
+
+
+
