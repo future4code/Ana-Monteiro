@@ -1,0 +1,164 @@
+Exercício 1
+
+a) ALTER TABLE Actor DROP COLUMN salary;
+
+Alterar a tabela do ator, tirando a coluna de salário
+
+b) ALTER TABLE Actor CHANGE gender sex VARCHAR(6);
+
+Alterar tabela do ator, mudando a coluna de gender para sex
+
+c) ALTER TABLE Actor CHANGE gender gender VARCHAR(255);
+
+Mudar a configuração, de gender para gender VARCHAR(255);
+
+d) ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
+
+2)
+
+a)  UPDATE Actor
+    SET 
+    name = "Dinho Mamonas",
+    birth_date = "2000/10/01"
+    WHERE id = "003";
+
+
+b)  UPDATE Actor
+    SET
+    name = "JULIANA PÃES"
+    WHERE name = "Juliana Paes";
+
+    Retornando ao que era:
+
+    UPDATE Actor
+    SET
+    name = "Juliana Paes"
+    WHERE name = "JULIANA PÃES"
+
+
+c)  UPDATE Actor 
+    SET
+    name = "Bananinha", 
+    salary = 2000000,
+    birth_date = "1996/10/03",
+    gender = "male"
+    WHERE
+    id = "005";
+
+d)  UPDATE Actor
+    SET 
+    hometown = "LALA"
+    WHERE
+    id = "002";
+
+  Resposta: Código de erro: 1054. Coluna desconhecida 'cidade natal' em 'lista de campo'
+
+
+3)
+
+a) DELETE FROM Actor WHERE name = "Fernanda Montenegro";
+
+b)  DELETE 
+    FROM Actor
+    WHERE
+    gender = "male"
+    AND
+    salary < 1000000;
+
+4)
+
+a) SELECT MAX(salary) FROM Actor;
+
+b) SELECT MIN(salary) FROM Actor WHERE gender = "female";
+
+c) SELECT COUNT(*) FROM Actor WHERE gender = "female";
+
+d) SELECT SUM(salary) FROM Actor;
+
+
+
+5)
+
+a)  SELECT COUNT(*), gender
+    FROM Actor
+    GROUP BY gender;
+
+    Ele conta quantos atores são do sexo feminino e masculino, e os agrupa em uma coluna chamada gender (seria o GROUP BY gender).
+
+b)  SELECT id, name FROM Actor
+    ORDER 
+    BY name DESC;
+
+c) SELECT * FROM Actor ORDER BY salary ASC; 
+
+
+d) SELECT * FROM Actor ORDER BY salary DESC LIMIT 3;
+
+
+e)  SELECT AVG(salary), gender FROM Actor 
+    GROUP BY gender;
+
+
+6)
+
+a) ALTER TABLE Movie ADD playing_limit_date DATE DEFAULT "2020-10-01";
+
+b) ALTER TABLE Movie CHANGE rating rating FLOAT;
+
+c)  UPDATE Movie
+    SET
+    playing_limit_date = "2020-03-12"
+    WHERE
+    name = "Tropa de Elite";
+
+    UPDATE Movie
+    SET
+    playing_limit_date = "2005/02/03"
+    WHERE
+    name = "Dona Flor e seus dois Maridos";
+
+
+d)  DELETE FROM Movie WHERE id = "001";
+
+    ( aqui em cima ele deletou o filme com o id = "001" )
+
+    Depois ele tenta atualizar a sinopse do filme e não consegue, porque o id 001 foi deletado:
+
+    Ele dá a seguinte resposta :  
+
+    0 linhas afetadas Linhas combinadas: 0 Alterado: 0 Avisos: 0
+
+    UPDATE Movie
+    SET synopsis = "lala"
+    WHERE id = "001"
+
+
+7)
+
+a) SELECT COUNT(*) FROM Movie WHERE rating > 7.5;
+
+b) SELECT AVG(rating) FROM Movie;
+
+c) SELECT COUNT(*) FROM Movie WHERE playing_limit_date >= "2020-01-12";
+
+d) SELECT COUNT(*) FROM Movie WHERE date_movie > "2020-01-12";
+
+e) SELECT MAX(rating) FROM Movie;
+
+f) SELECT MIN(rating) FROM Movie;
+
+
+8)
+
+a) SELECT * FROM Movie ORDER BY name ASC;
+
+b) SELECT * FROM Movie ORDER BY name DESC LIMIT 5;
+
+c) SELECT * FROM Movie ORDER BY date_movie DESC LIMIT 3;
+
+d)  SELECT * FROM Movie
+    ORDER BY rating DESC
+    LIMIT 3; 
+
+
+
