@@ -53,3 +53,14 @@ d)  UPDATE Actor
 
   Resposta: Código de erro: 1054. Coluna desconhecida 'cidade natal' em 'lista de campo'
 
+
+3)
+
+a) DELETE FROM Actor WHERE name = "Fernanda Montenegro";
+
+B)  DELETE 
+    FROM Actor
+    WHERE
+    gender = "male"
+    AND
+    salary < 1000000;
