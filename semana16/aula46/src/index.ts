@@ -2,6 +2,7 @@ import knex from "knex";   // biblioteca para acessar banco de dados
 import express, { Request, Response } from "express";  // criar endpoints para fazer a requisição 
 import dotenv from "dotenv";  // Usar o .env, serve para ocultar informações no gitHub
 import { AddressInfo } from "net";
+import { IdentifierTypePredicate } from "typescript";
 
 /**************************************************************/
 
@@ -79,6 +80,7 @@ async function testEndpoint(req:Request, res:Response): Promise<void>{
 
 /*************************Letra B**************************************** */
 
+/*
 const getActorByName = async (name: string): Promise<any> => {
 
   try { const result = await connection.raw(`
@@ -96,8 +98,11 @@ const getActorByName = async (name: string): Promise<any> => {
 
 getActorByName("Dinho Mamonas")
 
+*/
+
 /*********************************Letra C******************************** */
 
+/*
 const getActorByGender = async (gender: string): Promise<any> => {
   try { const result = await connection.raw(`
     SELECT COUNT('${gender}') FROM Actor WHERE gender = '${gender}'
@@ -109,7 +114,59 @@ const getActorByGender = async (gender: string): Promise<any> => {
     }
   }
 
-  getActorByGender('female')
+  getActorByGender('female')*/
+
+/******************************Exercício 2************************* */
+
+/******Letra A************************* */
+
+/*
+const updateActor = async (
+  id: string,
+  salary: number
+
+): Promise<void> => {
+  await connection("Actor").update({
+    salary: salary
+  })
+  .where("id", id)
+}
+
+updateActor("003", 5000000)
+
+*/
+
+/****Letra B********************* */
+
+/*
+
+const deleteActor = async (
+  id: string
+
+): Promise<void> => {
+  await connection("Actor").delete()
+  .where("id", id)
+}
+
+deleteActor("005")
+
+*/
+
+/****Letra C********************* */
+
+const calcAverage = async (
+   gender: string
+
+): Promise<any> => {
+  const result = await connection("Actor").avg("salary as salary")
+  .where({gender})
+
+  console.log(result[0])
+
+  return result[0].average
+}
+
+calcAverage("female")
 
 /***************************************************************** */
 
