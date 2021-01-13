@@ -35,30 +35,6 @@ app.use(express.json()); // transforma em json as informações passadas pela re
 /**************************************************************/
 
 
-/*const getActorById = async (id: string): Promise<any> => {
-  const result = await connection.raw(`
-    SELECT * FROM Actor WHERE id = '${id}'
-  `)
-
-  return result[0]
-  
-}
-
-app.get('/actor/:id', async (req: Request, res: Response) =>{     // é um endpoint
-  try{
-    const actors = await getActorById(req.params.id)
-    if(!actors.length){
-      errorCode = 404
-      throw new Error('Nenhum ator encontrado')
-    }
-    res.status(200).send(actors)
-  }
-  catch(error){
-    console.log(error)
-    res.send(error.message)
-  }
-
-})*/
 
 /***************************************************************** */
 
@@ -154,6 +130,7 @@ deleteActor("005")
 
 /****Letra C********************* */
 
+/*
 const calcAverage = async (
    gender: string
 
@@ -168,7 +145,62 @@ const calcAverage = async (
 
 calcAverage("female")
 
+*/
+
+
+/**************************Exercicio 3******************************** */
+
+/*
+const getActorById = async (id: string): Promise<any> => {
+  const result = await connection.raw(`
+    SELECT * FROM Actor WHERE id = '${id}'
+  `)
+
+  return result[0]
+  
+}
+
+app.get('/actor/:id', async (req: Request, res: Response) =>{     
+  try{
+    const actors = await getActorById(req.params.id)
+    if(!actors.length){
+      errorCode = 404
+      throw new Error('Nenhum ator encontrado')
+    }
+    res.status(200).send(actors)
+  }
+  catch(error){
+    console.log(error)
+    res.send(error.message)
+  }
+
+})
+
+*/
+
+const countActors = async (gender: string): Promise<any> => {
+  const result = await connection.raw(
+     `SELECT COUNT(*) FROM Actor WHERE gender = ${gender}`
+     )
+}
+
+app.get("/actor?gender=", async (req: Request, res: Response) => {
+
+  try{
+    const count = await countActors(req.query.gender as string);
+    res.status(200).send({
+      quantity: count,
+    })
+  } catch (err){
+    res.status(400).send({
+      message: err.message,
+    })
+  }
+})
+
+
 /***************************************************************** */
+
 
 
 const server = app.listen(process.env.PORT || 3003, () => {                // Criar o servidor   

@@ -42,3 +42,5 @@ const getActorByGender = async (gender: string): Promise<any> => {
   getActorByGender('female')
 
 ```
+
+
