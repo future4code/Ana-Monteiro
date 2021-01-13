@@ -34,7 +34,7 @@ app.use(express.json()); // transforma em json as informações passadas pela re
 /**************************************************************/
 
 
-const getActorById = async (id: string): Promise<any> => {
+/*const getActorById = async (id: string): Promise<any> => {
   const result = await connection.raw(`
     SELECT * FROM Actor WHERE id = '${id}'
   `)
@@ -57,11 +57,13 @@ app.get('/actor/:id', async (req: Request, res: Response) =>{     // é um endpo
     res.send(error.message)
   }
 
-})
+})*/
 
 /***************************************************************** */
 
-app.get('/actor', testEndpoint)
+
+
+/*app.get('/actor', testEndpoint)
 
 async function testEndpoint(req:Request, res:Response): Promise<void>{
   try {
@@ -73,10 +75,43 @@ async function testEndpoint(req:Request, res:Response): Promise<void>{
   } catch (error) {
     res.status(400).send(error.message)
   }
-}
+}*/
+
+/*************************Letra B**************************************** */
+
+const getActorByName = async (name: string): Promise<any> => {
+
+  try { const result = await connection.raw(`
+    SELECT * FROM Actor WHERE name = '${name}'
+  `)
+
+  console.log(result[0])
+
+  return result[0]
+
+  } catch (error) {
+      console.log(error.sqlMessage || error.message)
+    }
+  }
+
+getActorByName("Dinho Mamonas")
+
+/*********************************Letra C******************************** */
+
+const getActorByGender = async (gender: string): Promise<any> => {
+  try { const result = await connection.raw(`
+    SELECT COUNT('${gender}') FROM Actor WHERE gender = '${gender}'
+  `)
+  console.log(result[0])
+  return result[0]
+  } catch (error) {
+      console.log(error.sqlMessage || error.message)
+    }
+  }
+
+  getActorByGender('female')
 
 /***************************************************************** */
-
 
 
 const server = app.listen(process.env.PORT || 3003, () => {                // Criar o servidor   
