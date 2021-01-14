@@ -83,3 +83,23 @@ d) Não é possível deletar um dado que está já referenciado na outra tabela
 Código de erro: 1451. Não é possível excluir ou atualizar uma linha pai: uma restrição de chave estrangeira falha (`dumont-ana-monteiro``MovieCast`, CONSTRAINT` MovieCast_ibfk_2` FOREIGN KEY (`actor_id`) REFERÊNCIAS` Ator` (`id` ))
 
 
+# Exercício 3
+
+a) Com o comando juntamos as informações das duas tabelas. Em que o comparador ON é que faz o comparativo entre as ids criadas.
+
+```
+SELECT * FROM Movie 
+INNER JOIN Rating ON Movie.id = Rating.movie_id;
+
+```
+
+b)
+
+```
+
+SELECT Movie.id, Movie.name, Rating.rate FROM Movie
+INNER JOIN Rating ON Movie.id = Rating.movie_id
+WHERE Rating.rate IS NOT NULL;
+
+
+```
