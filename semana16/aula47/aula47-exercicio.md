@@ -1,6 +1,6 @@
 # Banco de dados SQl com Typescript
 
-Exercício 1
+# Exercício 1
 
 a)Uma chave estrangeira é um elo de ligação entre uma tabela e outra, é ela que referencia a qual dado está conectada.
 
@@ -47,4 +47,39 @@ ALTER TABLE Movie
 e)
 
 Código de erro: 1451. Não é possível excluir ou atualizar uma linha pai: uma restrição de chave estrangeira falha (`dumont-ana-monteiro``Rating`, CONSTRAINT` Rating_ibfk_1` FOREIGN KEY (`movie_id`) REFERÊNCIAS` Movie` (`id` ))
+
+
+# Exercicio 2
+
+a) Referência entre atores e filmes, em que um filme referencia a vários atores e um ator pode referenciar a vários filmes, uma referência N:M.
+
+
+
+b) 
+
+Fazer 6 relações
+
+```
+
+INSERT
+INTO MovieCast
+VALUES 
+('004', '003'),
+('004','007'),
+('004','002'),
+('002','008'),
+('002','003'),
+('002','007');
+
+
+```
+
+c) Erro ao criar uma relação com um filme e um ator com id inexistente.
+
+Código de erro: 1452. Não é possível adicionar ou atualizar uma linha filha: uma restrição de chave estrangeira falha (`dumont-ana-monteiro``MovieCast`, CONSTRAINT` MovieCast_ibfk_1` FOREIGN KEY (`movie_id`) REFERÊNCIAS` Movie` (`id` ))
+
+d) Não é possível deletar um dado que está já referenciado na outra tabela
+
+Código de erro: 1451. Não é possível excluir ou atualizar uma linha pai: uma restrição de chave estrangeira falha (`dumont-ana-monteiro``MovieCast`, CONSTRAINT` MovieCast_ibfk_2` FOREIGN KEY (`actor_id`) REFERÊNCIAS` Ator` (`id` ))
+
 
