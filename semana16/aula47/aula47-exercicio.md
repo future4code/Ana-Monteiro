@@ -103,3 +103,14 @@ WHERE Rating.rate IS NOT NULL;
 
 
 ```
+
+# Exercicio 4
+
+a)
+
+```
+SELECT Movie.id, Movie.name, Rating.rate, Rating.comment FROM Movie
+LEFT JOIN Rating ON Movie.id = Rating.movie_id;
+
+```
+
