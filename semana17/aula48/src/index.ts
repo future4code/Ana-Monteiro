@@ -3,7 +3,7 @@ import cors from "cors"
 import knex from "knex" // conexão com o banco de dados mysql
 import dotenv from "dotenv" // conexão com o banco de dados que está no .env, proteger os seus dados
 import {AddressInfo} from "net"
-import { getAllNames, getAllTypes, getAllUsers } from "./endpoint/Endpoint"
+import { getAllNames, getAllOrder, getAllTypes, getAllUsers } from "./endpoint/Endpoint"
 
 dotenv.config()
 const app = express()
@@ -33,6 +33,12 @@ app.get("/user", async(req: Request, res: Response) =>{
 app.get("/user/:type", async (req: Request, res: Response) => {
     const type: string = req.params.type
     getAllTypes(req, res, type)
+})
+
+app.get("/order", async (req: Request, res: Response) =>{
+    const order: string = req.query.order as string
+    const type: string = req.query.type as string
+    getAllOrder( req, res, type, order )
 })
 
 const server = app.listen(process.env.PORT || 3003, ()=>{
