@@ -17,7 +17,9 @@ const id: string = generate()
 const token = generateToken({id})
 
 console.log(id)
+
 console.log(token)
+
 
 const server = app.listen(process.env.PORT || 3000, () => {
   if (server) {

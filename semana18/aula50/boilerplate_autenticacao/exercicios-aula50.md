@@ -108,3 +108,6 @@ Define como string, não deixa voltar outro valor, somente string.
 b. Agora, crie a função que gere o token. Além disso, crie um type  para representar o input dessa função.
 
 // Feito na pasta authentication, como arquivo authenticathor.ts
+
+
+
