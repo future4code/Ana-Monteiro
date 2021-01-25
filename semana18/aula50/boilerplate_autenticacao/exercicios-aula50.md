@@ -68,3 +68,43 @@ SELECT * FROM newUser;
 c. Pela mesma justificativa do exercício anterior, crie uma função para ser responsável pela criação de usuários no banco.
 
 // Feito na pasta data/createUser.ts
+
+# Exercicio 3
+
+Antes de poder fazer o endpoint de cadastro, precisamos de uma forma para gerar o token de autenticação do usuário. Para isso, vamos usar o JWT. Ele possui uma função que permite gerar o token do usuário, que recebe três informações:
+
+- os dados que serão salvos no token (no nosso caso, o id);
+- a chave secreta usada pra criptografar o token;
+- algumas configurações, como o tempo de expiração
+
+Abaixo, há uma função que faz isso, com o tempo de expiração de 1 minuto:
+
+```
+
+import * as jwt from "jsonwebtoken";
+
+const expiresIn = "1min"
+
+const generateToken = (id: string): string => {
+  const token = jwt.sign(
+    {
+      id
+    },
+    process.env.JWT_KEY as string,
+    {
+      expiresIn
+    }
+  );
+  return token;
+}
+
+```
+
+a. O que a linha as string faz? Por que precisamos usar ela ali?
+
+Define como string, não deixa voltar outro valor, somente string.
+
+
+b. Agora, crie a função que gere o token. Além disso, crie um type  para representar o input dessa função.
+
+// Feito na pasta authentication, como arquivo authenticathor.ts
