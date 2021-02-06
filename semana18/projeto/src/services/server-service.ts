@@ -17,6 +17,7 @@ import express from "express"; // aqui é uma função express
 import cors from "cors";
 
 import bodyParser from "body-parser" // pegar o que vier e converter o json(texto) em objeto em typescript/javascript( nesse caso para typescript )
+import { EndpointService } from "./endpoint-service";
 
 export class ServerService {
     private static instancia: ServerService | undefined;
@@ -33,7 +34,12 @@ export class ServerService {
     }
 
     public iniciarServer(): void {
+        const app = this.definirConfig(); // Configurando o servidor
 
+        app.listen(3000, ()=>{
+            console.log("Servidor rodando na porta 3000")
+        })
+        EndpointService.pegarInstancia().iniciarEndpoint(app)
     }
 
     private definirConfig(): Express {
