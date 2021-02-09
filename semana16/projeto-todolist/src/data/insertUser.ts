@@ -11,5 +11,5 @@ export default async function insertUser(
         name,
         nickname,
         email
-    }).into('To_do_List_User')
+    }).into('to_do_list_user')
 }
