@@ -13,4 +13,14 @@ export class UserDatabase extends BaseDatabase{
             password
         }).into(UserDatabase.TABLE_NAME)
     }
+
+    public async getUserByEmail(email: string): Promise<any>{
+        const result = await this.getConnection()
+        .select('*')
+        .from(UserDatabase.TABLE_NAME)
+        .where({email})
+        return result[0]
+    }
 }
+
+// Arquivo para fazer querys
