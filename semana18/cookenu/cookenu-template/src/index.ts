@@ -3,6 +3,7 @@ import {AddressInfo} from "net";
 import { signUp } from "./endpoints/signUp";
 import { login } from "./endpoints/login";
 import { getUserProfile } from "./endpoints/getUserProfile";
+import { getUser} from "./endpoints/getUser";
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.post('/signup', signUp);
 app.post('/login', login)
 
 app.get('/user/profile', getUserProfile)
+
+app.get('/user/:id', getUser)
 
 const server = app.listen(3003, () => {
   if (server) {
