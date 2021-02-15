@@ -4,6 +4,7 @@ import { signUp } from "./endpoints/signUp";
 import { login } from "./endpoints/login";
 import { getUserProfile } from "./endpoints/getUserProfile";
 import { getUser} from "./endpoints/getUser";
+import { createRecipe } from "./endpoints/createRecipe";
 
 const app = express();
 
@@ -16,6 +17,8 @@ app.post('/login', login)
 app.get('/user/profile', getUserProfile)
 
 app.get('/user/:id', getUser)
+
+app.post('/recipe', createRecipe)
 
 const server = app.listen(3003, () => {
   if (server) {
