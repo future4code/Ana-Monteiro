@@ -13,4 +13,12 @@ export class RecipeDatabase extends BaseDatabase{
             createdAt
         }).into(RecipeDatabase.TABLE_NAME)
     }
+
+    public async getRecipeById (recipeId: string): Promise<any>{
+        const result = await this.getConnection()
+        .select('*')
+        .from(RecipeDatabase.TABLE_NAME)
+        .where ({recipe_id: recipeId})
+        return result[0]
+    }
 }
