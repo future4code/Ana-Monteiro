@@ -29,7 +29,6 @@ export class UserDatabase extends BaseDatabase{
         .where({id})
         return result[0]
     }
-    
 }
 
 // Arquivo para fazer querys

@@ -6,6 +6,7 @@ import { getUserProfile } from "./endpoints/getUserProfile";
 import { getUser} from "./endpoints/getUser";
 import { createRecipe } from "./endpoints/createRecipe";
 import { getRecipe } from "./endpoints/getRecipe";
+import { followUser } from "./endpoints/followUser";
 
 const app = express();
 
@@ -22,6 +23,8 @@ app.get('/user/:id', getUser)
 app.post('/recipe', createRecipe)
 
 app.get('/recipe/:id', getRecipe)
+
+app.post('/users/follow', followUser);
 
 const server = app.listen(3003, () => {
   if (server) {
